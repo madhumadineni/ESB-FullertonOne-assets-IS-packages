@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="node_type">restResource</value>
+  <value name="node_subtype">unknown</value>
+  <value name="node_nsName">FHGProviderServices.api.resources:provider</value>
+  <value name="node_pkg">FHGProviderServices</value>
+  <value name="node_comment"></value>
+  <value name="is_public">false</value>
+  <record name="restResource" javaclass="com.wm.util.Values">
+    <value name="resourceName">provider</value>
+    <value name="nsName">FHGProviderServices.api:provider</value>
+    <array name="operations" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="urlTemplate">/authenticate</value>
+        <value name="serviceName">FHGProviderServices.services.security:authenticate</value>
+        <array name="httpMethods" type="value" depth="1">
+          <value>POST</value>
+        </array>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="urlTemplate">/auth/user</value>
+        <value name="serviceName">FHGProviderServices.services.security:authenticateUser</value>
+        <array name="httpMethods" type="value" depth="1">
+          <value>POST</value>
+        </array>
+      </record>
+    </array>
+  </record>
+  <null name="originUri"/>
+  <value name="resourceName">provider</value>
+  <Boolean name="modifiable">true</Boolean>
+</Values>

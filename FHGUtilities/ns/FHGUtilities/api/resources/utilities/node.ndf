@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="node_type">restResource</value>
+  <value name="node_subtype">unknown</value>
+  <value name="node_nsName">FHGUtilities.api.resources:utilities</value>
+  <value name="node_pkg">FHGUtilities</value>
+  <value name="node_comment"></value>
+  <value name="is_public">false</value>
+  <record name="restResource" javaclass="com.wm.util.Values">
+    <value name="resourceName">utilities</value>
+    <value name="nsName">FHGUtilities.api.resources:utilities</value>
+    <array name="operations" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="urlTemplate">/user/add</value>
+        <value name="serviceName">FHGUtilities.services:addUser</value>
+        <array name="httpMethods" type="value" depth="1">
+          <value>POST</value>
+        </array>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="urlTemplate">/connection/test</value>
+        <value name="serviceName">FHGUtilities.services:testConnection</value>
+        <array name="httpMethods" type="value" depth="1">
+          <value>POST</value>
+        </array>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="urlTemplate">/user/delete</value>
+        <value name="serviceName">FHGUtilities.services:deleteUser</value>
+        <array name="httpMethods" type="value" depth="1">
+          <value>POST</value>
+        </array>
+      </record>
+    </array>
+  </record>
+  <null name="originUri"/>
+  <value name="resourceName">utilities</value>
+  <Boolean name="modifiable">true</Boolean>
+</Values>
