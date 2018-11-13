@@ -1,0 +1,121 @@
+<!--
+#######################################################################################
+Packages, folders and services are converted to a dot-separated heirarchy as follows:
+
+For example, the service: 
+  WxLog/wx.logger.pub:log
+Becomes: 
+  WxLog.wx.logger.pub.log
+
+
+Examples:
+=========
+
+  Log Levels:
+  ===========
+  OFF
+  FATAL
+  ERROR
+  WARN
+  INFO
+  DEBUG
+  TRACE
+  ALL
+
+  Patterns:
+  =========
+  <pattern>HI %d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+  <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %3([%.-1level]) %3(123) %-30(%X{pkg}/%X{svc_short}:) trackingID: %X{trackingID} %msg%n</pattern>
+
+  MDC Values:
+  ===========
+  %X{mdc-name}
+
+  STDOUT Appender:
+  ================
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>HI %d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  FILE Appender:
+  ==============
+  <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+    <file>logs/WxLogger.log</file>
+    <append>true</append>
+    <encoder>
+      <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %3([%.-1level]) %3(123) %-30(%X{pkg}/%X{svc_short}:) trackingID: %X{trackingID} %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  Setting log levels:
+  ===================
+  Package-level:
+  <logger name="WxLoggerTest" level="TRACE" />
+
+  Folder-level:
+  <logger name="WxLoggerTest.WxLoggertest" level="TRACE" />
+
+  Service-level:
+  <logger name="WxLoggerTest.WxLoggertest.log" level="TRACE" />
+
+  Root Logger:
+  ============
+  <root level="ERROR">
+	<appender-ref ref="STDOUT"/> 
+	<appender-ref ref="FILE"/>
+  </root>
+  
+  Send a logger to a different appender:
+  ======================================
+  <logger name="WxLoggerTest.WxLoggertest.topLevelService" level="TRACE" >
+	<appender-ref ref="FILE2"/>
+  </logger>
+  
+#######################################################################################
+-->
+
+<configuration scan="true" scanPeriod="30 seconds">
+
+  <!-- Define Appenders -->
+
+    <!-- FOR Authenticate -->
+        <appender name="authenticate" class="ch.qos.logback.core.rolling.RollingFileAppender" additivity="false">
+                <file>logs/AUTHENTICATE_V01_TRANSACTION.log</file>
+                <append>true</append>
+
+                <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+                        <fileNamePattern>logs/AUTHENTICATE_V01_TRANSACTION.%d{yyyy-MM-dd}.log</fileNamePattern>
+                        <maxHistory>30</maxHistory>
+                </rollingPolicy>
+
+                <encoder>
+                        <pattern>%d{yyyy-MM-dd HH:mm:ss} %logger{50} %3([%.-1level]): %msg%n</pattern>
+                </encoder>
+        </appender>
+        <logger name="AUTHENTICATE_V01_LOGGER" level="DEBUG" >
+                <appender-ref ref="authenticate"/>
+        </logger>
+        <appender name="authenticate" class="ch.qos.logback.classic.AsyncAppender">
+                <appender-ref ref="authenticate" />
+        </appender>		
+  
+  
+  <!-- Default WxLogger Appender -->
+  <!-- Add your own custom appenders if you wish -->
+  <appender name="WxLogDefaultAppender" class="ch.qos.logback.core.FileAppender">
+    <file>logs/wxlog/wxlog.log</file>
+    <append>true</append>
+    <encoder>
+      <pattern>%d{yyyy-MM-dd HH:mm:ss} %logger{50} %3([%.-1level]): %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <!-- Set root log level and appender(s) -->
+  <root level="INFO">
+    <appender-ref ref="WxLogDefaultAppender"/>
+  </root>
+
+</configuration>
+
