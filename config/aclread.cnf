@@ -85,4 +85,6 @@
   <value name="applatform.services:unregisterService">Default</value>
   <value name="FHGCanonical.docs:authenticateRequest">Anonymous</value>
   <value name="FHGCanonical.docs:authenticateResponse">Anonymous</value>
+  <value name="FHGCanonical.docs:verifyMemberResponse">Anonymous</value>
+  <value name="FHGCanonical.docs:verifyMemberFHN3Response">Anonymous</value>
 </Values>

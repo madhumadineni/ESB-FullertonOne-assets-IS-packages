@@ -449,6 +449,7 @@
   <value name="wx.config.impl.autoSetup.tn.profile:profileExists">Internal</value>
   <value name="wx.config.impl.autoSetup.scheduler:packageStartup">Internal</value>
   <value name="MainframeSampleServices">Developers</value>
+  <value name="FHGMemberServices.services.membership:verify">ISConnect</value>
   <value name="wm.server.dispatcher">Developers</value>
   <value name="wx.config.impl.autoSetup.messaging.is:createwmJndiSettings">Internal</value>
   <value name="wx.mws.samples:sample_01_CheckAndCreate">Administrators</value>

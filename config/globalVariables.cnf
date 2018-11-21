@@ -78,6 +78,56 @@
         <value name="value">Failed</value>
         <value name="isSecure">false</value>
       </record>
+      <record javaclass="com.wm.data.ISMemDataImpl">
+        <value name="key">v01.verifyMember.FHN3URL</value>
+        <value name="value">https://uat-api.fhn3.com/esb_verifyMember</value>
+        <value name="isSecure">false</value>
+      </record>
+      <record javaclass="com.wm.data.ISMemDataImpl">
+        <value name="key">v01.verifyMember.timeout</value>
+        <value name="value">60000</value>
+        <value name="isSecure">false</value>
+      </record>
+      <record javaclass="com.wm.data.ISMemDataImpl">
+        <value name="key">v01.verifyMember.FHN3.500Error</value>
+        <value name="value">member not found in FHN3</value>
+        <value name="isSecure">false</value>
+      </record>
+      <record javaclass="com.wm.data.ISMemDataImpl">
+        <value name="key">v01.verifyMember.FHN3.Error</value>
+        <value name="value">Issue with FHN3 WebService</value>
+        <value name="isSecure">false</value>
+      </record>
+      <record javaclass="com.wm.data.ISMemDataImpl">
+        <value name="key">v01.verifyMember.ESB.ErrorCode</value>
+        <value name="value">500</value>
+        <value name="isSecure">false</value>
+      </record>
+      <record javaclass="com.wm.data.ISMemDataImpl">
+        <value name="key">v01.verifyMember.service_id</value>
+        <value name="value">2</value>
+        <value name="isSecure">false</value>
+      </record>
+      <record javaclass="com.wm.data.ISMemDataImpl">
+        <value name="key">v01.verifyMember.logger</value>
+        <value name="value">VERIFYMEMBER_V01_LOGGER</value>
+        <value name="isSecure">false</value>
+      </record>
+      <record javaclass="com.wm.data.ISMemDataImpl">
+        <value name="key">v01.verifyMember.dataissue.code</value>
+        <value name="value">400</value>
+        <value name="isSecure">false</value>
+      </record>
+      <record javaclass="com.wm.data.ISMemDataImpl">
+        <value name="key">v01.verifyMember.failure</value>
+        <value name="value">False</value>
+        <value name="isSecure">false</value>
+      </record>
+      <record javaclass="com.wm.data.ISMemDataImpl">
+        <value name="key">v01.verifyMember.dataissue.message</value>
+        <value name="value">Transaction_id missing</value>
+        <value name="isSecure">false</value>
+      </record>
     </array>
   </record>
 </IDataXMLCoder>
