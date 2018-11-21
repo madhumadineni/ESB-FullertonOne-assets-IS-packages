@@ -101,7 +101,27 @@ Examples:
                 <appender-ref ref="authenticate" />
         </appender>		
   
-  
+ <!-- FOR VerifyMember -->
+        <appender name="verifyMember" class="ch.qos.logback.core.rolling.RollingFileAppender" additivity="false">
+                <file>logs/VERIFYMEMBER_V01_TRANSACTION.log</file>
+                <append>true</append>
+
+                <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+                        <fileNamePattern>logs/VERIFYMEMBER_V01_TRANSACTION.%d{yyyy-MM-dd}.log</fileNamePattern>
+                        <maxHistory>30</maxHistory>
+                </rollingPolicy>
+
+                <encoder>
+                        <pattern>%d{yyyy-MM-dd HH:mm:ss} %logger{50} %3([%.-1level]): %msg%n</pattern>
+                </encoder>
+        </appender>
+        <logger name="VERIFYMEMBER_V01_LOGGER" level="DEBUG" >
+                <appender-ref ref="verifyMember"/>
+        </logger>
+        <appender name="verifyMember" class="ch.qos.logback.classic.AsyncAppender">
+                <appender-ref ref="verifyMember" />
+        </appender>		
+		
   <!-- Default WxLogger Appender -->
   <!-- Add your own custom appenders if you wish -->
   <appender name="WxLogDefaultAppender" class="ch.qos.logback.core.FileAppender">
