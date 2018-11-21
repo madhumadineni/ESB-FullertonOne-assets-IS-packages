@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="node_type">restDescriptor</value>
+  <value name="node_subtype">restv2Descriptor</value>
+  <value name="node_nsName">FHGMemberServices.api.swagger:member</value>
+  <value name="node_pkg">FHGMemberServices</value>
+  <value name="node_comment"></value>
+  <value name="is_public">false</value>
+  <record name="generalInfo" javaclass="com.wm.util.Values">
+    <value name="specVersion">2.0</value>
+    <value name="hostName">SGVAZESBUAT001.fullertonhealth.com:7516</value>
+    <value name="basePath">/member</value>
+    <array name="schemes" type="value" depth="1">
+      <value>https</value>
+    </array>
+    <array name="consumes" type="value" depth="1">
+      <value>application/json</value>
+    </array>
+    <array name="produces" type="value" depth="1">
+      <value>application/json</value>
+    </array>
+  </record>
+  <record name="appInfo" javaclass="com.wm.util.Values">
+    <value name="appVersion">1.0</value>
+    <value name="title">member</value>
+    <null name="termsOfService"/>
+    <record name="contact" javaclass="com.wm.util.Values">
+      <null name="contactName"/>
+      <null name="contactUrl"/>
+      <null name="contactEmail"/>
+    </record>
+    <record name="license" javaclass="com.wm.util.Values">
+      <null name="licenseName"/>
+      <null name="licenseUrl"/>
+    </record>
+  </record>
+  <null name="sourceUri"/>
+  <null name="swaggerUrl"/>
+  <Boolean name="modifiable">true</Boolean>
+  <record name="restResources" javaclass="com.wm.util.Values">
+    <record name="/verify" javaclass="com.wm.util.Values">
+      <value name="nsName">FHGMemberServices.api.resources:member</value>
+      <value name="path">/verify</value>
+      <null name="suffix"/>
+      <record name="operations" javaclass="com.wm.util.Values">
+        <record name="POST" javaclass="com.wm.util.Values">
+          <value name="operationType">POST</value>
+          <value name="nsName">/verify_POST</value>
+          <array name="requiredDefinitions" type="value" depth="1">
+            <value>FHGCanonical.docs:verifyMemberRequest</value>
+            <value>FHGCanonical.common:requestHeader</value>
+            <value>FHGCanonical.docs:verifyMemberFHN3Request</value>
+            <value>FHGCanonical.docs:verifyMemberResponse</value>
+            <value>FHGCanonical.common:responseHeader</value>
+            <value>/verify_POST.body</value>
+            <value>FHGCanonical.common:errorDocument</value>
+            <value>/verify_POST.memberList</value>
+            <value>/verify_POST.scheme</value>
+            <value>/verify_POST.currency</value>
+            <value>/verify_POST_$response</value>
+          </array>
+          <record name="parameters" javaclass="com.wm.util.Values">
+            <record name="verifyMemberRequest" javaclass="com.wm.util.Values">
+              <value name="name">verifyMemberRequest</value>
+              <value name="source">BODY</value>
+              <value name="type">REFERENCE</value>
+              <null name="description"/>
+              <Boolean name="isRequired">true</Boolean>
+              <Boolean name="isArray">false</Boolean>
+              <null name="defaultValue"/>
+              <value name="refDefinition">FHGCanonical.docs:verifyMemberRequest</value>
+              <value name="definitionName">verifyMemberRequest</value>
+              <Boolean name="includeInRad">true</Boolean>
+            </record>
+          </record>
+          <record name="responseParam" javaclass="com.wm.util.Values">
+            <value name="name">reseponse</value>
+            <value name="source">BODY</value>
+            <value name="type">REFERENCE</value>
+            <null name="description"/>
+            <Boolean name="isRequired">true</Boolean>
+            <Boolean name="isArray">false</Boolean>
+            <null name="defaultValue"/>
+            <value name="refDefinition">/verify_POST_$response</value>
+            <null name="definitionName"/>
+            <Boolean name="includeInRad">true</Boolean>
+          </record>
+          <record name="responses" javaclass="com.wm.util.Values">
+            <record name="200" javaclass="com.wm.util.Values">
+              <value name="statusCode">200</value>
+              <value name="description">Successful</value>
+              <Boolean name="returnOutput">true</Boolean>
+            </record>
+            <record name="401" javaclass="com.wm.util.Values">
+              <value name="statusCode">401</value>
+              <value name="description">Access Denied</value>
+              <Boolean name="returnOutput">false</Boolean>
+            </record>
+          </record>
+        </record>
+      </record>
+    </record>
+  </record>
+  <record name="restDefinitions" javaclass="com.wm.util.Values">
+    <record name="FHGCanonical.common:requestHeader" javaclass="com.wm.util.Values">
+      <value name="name">requestHeader</value>
+      <value name="nsName">FHGCanonical.common:requestHeader</value>
+      <Boolean name="autoGenerated">false</Boolean>
+      <Boolean name="recursive">false</Boolean>
+      <null name="description"/>
+      <record name="parameters" javaclass="com.wm.util.Values">
+        <record name="sessionId" javaclass="com.wm.util.Values">
+          <value name="name">sessionId</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="country" javaclass="com.wm.util.Values">
+          <value name="name">country</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="language" javaclass="com.wm.util.Values">
+          <value name="name">language</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="transactionID" javaclass="com.wm.util.Values">
+          <value name="name">transactionID</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="sourceApplication" javaclass="com.wm.util.Values">
+          <value name="name">sourceApplication</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="targetApplication" javaclass="com.wm.util.Values">
+          <value name="name">targetApplication</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="transactionDate" javaclass="com.wm.util.Values">
+          <value name="name">transactionDate</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+      </record>
+    </record>
+    <record name="FHGCanonical.common:responseHeader" javaclass="com.wm.util.Values">
+      <value name="name">responseHeader</value>
+      <value name="nsName">FHGCanonical.common:responseHeader</value>
+      <Boolean name="autoGenerated">false</Boolean>
+      <Boolean name="recursive">false</Boolean>
+      <null name="description"/>
+      <record name="parameters" javaclass="com.wm.util.Values">
+        <record name="success" javaclass="com.wm.util.Values">
+          <value name="name">success</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="statusCode" javaclass="com.wm.util.Values">
+          <value name="name">statusCode</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="statusMessage" javaclass="com.wm.util.Values">
+          <value name="name">statusMessage</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+      </record>
+    </record>
+    <record name="FHGCanonical.docs:verifyMemberFHN3Request" javaclass="com.wm.util.Values">
+      <value name="name">verifyMemberFHN3Request</value>
+      <value name="nsName">FHGCanonical.docs:verifyMemberFHN3Request</value>
+      <Boolean name="autoGenerated">false</Boolean>
+      <Boolean name="recursive">false</Boolean>
+      <null name="description"/>
+      <record name="parameters" javaclass="com.wm.util.Values">
+        <record name="idn" javaclass="com.wm.util.Values">
+          <value name="name">idn</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="visitDateTimeStr" javaclass="com.wm.util.Values">
+          <value name="name">visitDateTimeStr</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="benefitTypes" javaclass="com.wm.util.Values">
+          <value name="name">benefitTypes</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">true</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+      </record>
+    </record>
+    <record name="FHGCanonical.common:errorDocument" javaclass="com.wm.util.Values">
+      <value name="name">errorDocument</value>
+      <value name="nsName">FHGCanonical.common:errorDocument</value>
+      <Boolean name="autoGenerated">false</Boolean>
+      <Boolean name="recursive">false</Boolean>
+      <null name="description"/>
+      <record name="parameters" javaclass="com.wm.util.Values">
+        <record name="errorCode" javaclass="com.wm.util.Values">
+          <value name="name">errorCode</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="errorMessage" javaclass="com.wm.util.Values">
+          <value name="name">errorMessage</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="detailedMessage" javaclass="com.wm.util.Values">
+          <value name="name">detailedMessage</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+      </record>
+    </record>
+    <record name="/verify_POST.scheme" javaclass="com.wm.util.Values">
+      <value name="name">scheme</value>
+      <value name="nsName">/verify_POST.scheme</value>
+      <Boolean name="autoGenerated">true</Boolean>
+      <Boolean name="recursive">false</Boolean>
+      <null name="description"/>
+      <record name="parameters" javaclass="com.wm.util.Values">
+        <record name="capping" javaclass="com.wm.util.Values">
+          <value name="name">capping</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="coins" javaclass="com.wm.util.Values">
+          <value name="name">coins</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="copay" javaclass="com.wm.util.Values">
+          <value name="name">copay</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="limitPerDay" javaclass="com.wm.util.Values">
+          <value name="name">limitPerDay</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="name" javaclass="com.wm.util.Values">
+          <value name="name">name</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="schemeId" javaclass="com.wm.util.Values">
+          <value name="name">schemeId</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="visitPerDay" javaclass="com.wm.util.Values">
+          <value name="name">visitPerDay</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+      </record>
+    </record>
+    <record name="FHGCanonical.docs:verifyMemberResponse" javaclass="com.wm.util.Values">
+      <value name="name">verifyMemberResponse</value>
+      <value name="nsName">FHGCanonical.docs:verifyMemberResponse</value>
+      <Boolean name="autoGenerated">false</Boolean>
+      <Boolean name="recursive">false</Boolean>
+      <null name="description"/>
+      <record name="parameters" javaclass="com.wm.util.Values">
+        <record name="header" javaclass="com.wm.util.Values">
+          <value name="name">header</value>
+          <value name="source">BODY</value>
+          <value name="type">REFERENCE</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <value name="refDefinition">FHGCanonical.common:responseHeader</value>
+          <value name="definitionName">responseHeader</value>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">body</value>
+          <value name="source">BODY</value>
+          <value name="type">REFERENCE</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <value name="refDefinition">/verify_POST.body</value>
+          <value name="definitionName">body</value>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+      </record>
+    </record>
+    <record name="/verify_POST.body" javaclass="com.wm.util.Values">
+      <value name="name">body</value>
+      <value name="nsName">/verify_POST.body</value>
+      <Boolean name="autoGenerated">true</Boolean>
+      <Boolean name="recursive">false</Boolean>
+      <null name="description"/>
+      <record name="parameters" javaclass="com.wm.util.Values">
+        <record name="memberList" javaclass="com.wm.util.Values">
+          <value name="name">memberList</value>
+          <value name="source">BODY</value>
+          <value name="type">REFERENCE</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">true</Boolean>
+          <null name="defaultValue"/>
+          <value name="refDefinition">/verify_POST.memberList</value>
+          <value name="definitionName">memberList</value>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="error" javaclass="com.wm.util.Values">
+          <value name="name">error</value>
+          <value name="source">BODY</value>
+          <value name="type">REFERENCE</value>
+          <null name="description"/>
+          <Boolean name="isRequired">false</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <value name="refDefinition">FHGCanonical.common:errorDocument</value>
+          <value name="definitionName">errorDocument</value>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+      </record>
+    </record>
+    <record name="/verify_POST.memberList" javaclass="com.wm.util.Values">
+      <value name="name">memberList</value>
+      <value name="nsName">/verify_POST.memberList</value>
+      <Boolean name="autoGenerated">true</Boolean>
+      <Boolean name="recursive">false</Boolean>
+      <null name="description"/>
+      <record name="parameters" javaclass="com.wm.util.Values">
+        <record name="currency" javaclass="com.wm.util.Values">
+          <value name="name">currency</value>
+          <value name="source">BODY</value>
+          <value name="type">REFERENCE</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <value name="refDefinition">/verify_POST.currency</value>
+          <value name="definitionName">currency</value>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="idn" javaclass="com.wm.util.Values">
+          <value name="name">idn</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="name" javaclass="com.wm.util.Values">
+          <value name="name">name</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="scheme" javaclass="com.wm.util.Values">
+          <value name="name">scheme</value>
+          <value name="source">BODY</value>
+          <value name="type">REFERENCE</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <value name="refDefinition">/verify_POST.scheme</value>
+          <value name="definitionName">scheme</value>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="visitDateTimeStr" javaclass="com.wm.util.Values">
+          <value name="name">visitDateTimeStr</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+      </record>
+    </record>
+    <record name="/verify_POST.currency" javaclass="com.wm.util.Values">
+      <value name="name">currency</value>
+      <value name="nsName">/verify_POST.currency</value>
+      <Boolean name="autoGenerated">true</Boolean>
+      <Boolean name="recursive">false</Boolean>
+      <null name="description"/>
+      <record name="parameters" javaclass="com.wm.util.Values">
+        <record name="code" javaclass="com.wm.util.Values">
+          <value name="name">code</value>
+          <value name="source">FORMDATA</value>
+          <value name="type">STRING</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <null name="refDefinition"/>
+          <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+      </record>
+    </record>
+    <record name="FHGCanonical.docs:verifyMemberRequest" javaclass="com.wm.util.Values">
+      <value name="name">verifyMemberRequest</value>
+      <value name="nsName">FHGCanonical.docs:verifyMemberRequest</value>
+      <Boolean name="autoGenerated">false</Boolean>
+      <Boolean name="recursive">false</Boolean>
+      <null name="description"/>
+      <record name="parameters" javaclass="com.wm.util.Values">
+        <record name="header" javaclass="com.wm.util.Values">
+          <value name="name">header</value>
+          <value name="source">BODY</value>
+          <value name="type">REFERENCE</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <value name="refDefinition">FHGCanonical.common:requestHeader</value>
+          <value name="definitionName">requestHeader</value>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">body</value>
+          <value name="source">BODY</value>
+          <value name="type">REFERENCE</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <value name="refDefinition">FHGCanonical.docs:verifyMemberFHN3Request</value>
+          <value name="definitionName">verifyMemberFHN3Request</value>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+      </record>
+    </record>
+    <record name="/verify_POST_$response" javaclass="com.wm.util.Values">
+      <value name="name">verify_POST_response</value>
+      <value name="nsName">/verify_POST_$response</value>
+      <Boolean name="autoGenerated">true</Boolean>
+      <Boolean name="recursive">false</Boolean>
+      <null name="description"/>
+      <record name="parameters" javaclass="com.wm.util.Values">
+        <record name="verifyMemberResponse" javaclass="com.wm.util.Values">
+          <value name="name">verifyMemberResponse</value>
+          <value name="source">BODY</value>
+          <value name="type">REFERENCE</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <value name="refDefinition">FHGCanonical.docs:verifyMemberResponse</value>
+          <value name="definitionName">verifyMemberResponse</value>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+      </record>
+    </record>
+  </record>
+  <null name="radSource"/>
+  <value name="radVersion">1.0</value>
+  <array name="generatedDoctypes" type="record" depth="1">
+  </array>
+  <array name="generatedServices" type="record" depth="1">
+  </array>
+  <array name="generatedRestResources" type="record" depth="1">
+  </array>
+  <array name="resourceNodeNSNames" type="value" depth="1">
+    <value>FHGMemberServices.api.resources:member</value>
+  </array>
+</Values>
