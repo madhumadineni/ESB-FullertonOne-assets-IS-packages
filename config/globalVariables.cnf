@@ -128,6 +128,11 @@
         <value name="value">Transaction_id missing</value>
         <value name="isSecure">false</value>
       </record>
+      <record javaclass="com.wm.data.ISMemDataImpl">
+        <value name="key">v01.verifyMember.success</value>
+        <value name="value">True</value>
+        <value name="isSecure">false</value>
+      </record>
     </array>
   </record>
 </IDataXMLCoder>
