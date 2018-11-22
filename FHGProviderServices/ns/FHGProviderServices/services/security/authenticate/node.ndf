@@ -9,69 +9,25 @@
       <value name="node_type">record</value>
       <value name="node_subtype">unknown</value>
       <value name="is_public">false</value>
-      <value name="field_type">record</value>
+      <value name="field_type">recref</value>
       <value name="field_dim">0</value>
-      <value name="wrapper_type">IData</value>
       <value name="nillable">true</value>
       <value name="form_qualified">false</value>
       <value name="is_global">false</value>
-      <array name="rec_fields" type="record" depth="1">
-        <record javaclass="com.wm.util.Values">
-          <value name="node_type">record</value>
-          <value name="node_subtype">unknown</value>
-          <value name="node_comment"></value>
-          <record name="node_hints" javaclass="com.wm.util.Values">
-            <value name="field_largerEditor">false</value>
-            <value name="field_password">false</value>
-          </record>
-          <value name="is_public">false</value>
-          <value name="field_name">authenticateRequest</value>
-          <value name="field_type">recref</value>
-          <value name="field_dim">0</value>
-          <value name="wrapper_type">IData</value>
-          <value name="nillable">true</value>
-          <value name="form_qualified">false</value>
-          <value name="is_global">false</value>
-          <value name="rec_closed">true</value>
-          <value name="modifiable">true</value>
-          <value name="rec_ref">FHGCanonical.docs:authenticateRequest</value>
-        </record>
-      </array>
       <value name="modifiable">true</value>
+      <value name="rec_ref">FHGCanonical.docs:authenticateRequest</value>
     </record>
     <record name="sig_out" javaclass="com.wm.util.Values">
       <value name="node_type">record</value>
       <value name="node_subtype">unknown</value>
       <value name="is_public">false</value>
-      <value name="field_type">record</value>
+      <value name="field_type">recref</value>
       <value name="field_dim">0</value>
-      <value name="wrapper_type">IData</value>
       <value name="nillable">true</value>
       <value name="form_qualified">false</value>
       <value name="is_global">false</value>
-      <array name="rec_fields" type="record" depth="1">
-        <record javaclass="com.wm.util.Values">
-          <value name="node_type">record</value>
-          <value name="node_subtype">unknown</value>
-          <value name="node_comment"></value>
-          <record name="node_hints" javaclass="com.wm.util.Values">
-            <value name="field_largerEditor">false</value>
-            <value name="field_password">false</value>
-          </record>
-          <value name="is_public">false</value>
-          <value name="field_name">authenticateResponse</value>
-          <value name="field_type">recref</value>
-          <value name="field_dim">0</value>
-          <value name="wrapper_type">IData</value>
-          <value name="nillable">true</value>
-          <value name="form_qualified">false</value>
-          <value name="is_global">false</value>
-          <value name="rec_closed">true</value>
-          <value name="modifiable">true</value>
-          <value name="rec_ref">FHGCanonical.docs:authenticateResponse</value>
-        </record>
-      </array>
       <value name="modifiable">true</value>
+      <value name="rec_ref">FHGCanonical.docs:authenticateResponse</value>
     </record>
   </record>
   <value name="node_comment"></value>
@@ -90,54 +46,8 @@
   <value name="svc_in_validator_options">none</value>
   <value name="svc_out_validator_options">none</value>
   <value name="auditoption">2</value>
-  <array name="auditfields_input" type="value" depth="2">
-    <array type="value" depth="1">
-      <value>/authenticateRequest;4;0;FHGCanonical.docs:authenticateRequest/header;4;0;FHGCanonical.common:requestHeader/targetApplication;1;0</value>
-      <value>targetApplication</value>
-    </array>
-    <array type="value" depth="1">
-      <value>/authenticateRequest;4;0;FHGCanonical.docs:authenticateRequest/header;4;0;FHGCanonical.common:requestHeader/sessionId;1;0</value>
-      <value>sessionId</value>
-    </array>
-    <array type="value" depth="1">
-      <value>/authenticateRequest;4;0;FHGCanonical.docs:authenticateRequest/header;4;0;FHGCanonical.common:requestHeader/transactionID;1;0</value>
-      <value>transactionID</value>
-    </array>
-    <array type="value" depth="1">
-      <value>/authenticateRequest;4;0;FHGCanonical.docs:authenticateRequest/header;4;0;FHGCanonical.common:requestHeader/sourceApplication;1;0</value>
-      <value>sourceApplication</value>
-    </array>
-  </array>
-  <array name="auditfields_output" type="value" depth="2">
-    <array type="value" depth="1">
-      <value>/authenticateResponse;4;0;FHGCanonical.docs:authenticateResponse/body;2;0/error;4;0;FHGCanonical.common:errorDocument/detailedMessage;1;0</value>
-      <value>detailedMessage</value>
-    </array>
-    <array type="value" depth="1">
-      <value>/authenticateResponse;4;0;FHGCanonical.docs:authenticateResponse/header;4;0;FHGCanonical.common:responseHeader/success;1;0</value>
-      <value>success</value>
-    </array>
-    <array type="value" depth="1">
-      <value>/authenticateResponse;4;0;FHGCanonical.docs:authenticateResponse/body;2;0/loginStatus;1;0</value>
-      <value>loginStatus</value>
-    </array>
-    <array type="value" depth="1">
-      <value>/authenticateResponse;4;0;FHGCanonical.docs:authenticateResponse/body;2;0/error;4;0;FHGCanonical.common:errorDocument/errorMessage;1;0</value>
-      <value>errorMessage</value>
-    </array>
-    <array type="value" depth="1">
-      <value>/authenticateResponse;4;0;FHGCanonical.docs:authenticateResponse/body;2;0/error;4;0;FHGCanonical.common:errorDocument/errorCode;1;0</value>
-      <value>errorCode</value>
-    </array>
-    <array type="value" depth="1">
-      <value>/authenticateResponse;4;0;FHGCanonical.docs:authenticateResponse/header;4;0;FHGCanonical.common:responseHeader/statusCode;1;0</value>
-      <value>statusCode</value>
-    </array>
-    <array type="value" depth="1">
-      <value>/authenticateResponse;4;0;FHGCanonical.docs:authenticateResponse/header;4;0;FHGCanonical.common:responseHeader/statusMessage;1;0</value>
-      <value>statusMessage</value>
-    </array>
-  </array>
+  <null name="auditfields_input"/>
+  <null name="auditfields_output"/>
   <record name="auditsettings" javaclass="com.wm.util.Values">
     <value name="document_data">0</value>
     <value name="startExecution">true</value>
