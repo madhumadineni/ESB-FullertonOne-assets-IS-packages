@@ -47,6 +47,7 @@
         <record name="POST" javaclass="com.wm.util.Values">
           <value name="operationType">POST</value>
           <value name="nsName">/verify_POST</value>
+          <value name="description"></value>
           <array name="requiredDefinitions" type="value" depth="1">
             <value>FHGCanonical.common:requestHeader</value>
             <value>FHGCanonical.docs:verifyMemberFHN3Request</value>
@@ -123,7 +124,7 @@
           <value name="name">sessionId</value>
           <value name="source">FORMDATA</value>
           <value name="type">STRING</value>
-          <null name="description"/>
+          <value name="description"></value>
           <Boolean name="isRequired">true</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
@@ -135,7 +136,7 @@
           <value name="name">country</value>
           <value name="source">FORMDATA</value>
           <value name="type">STRING</value>
-          <null name="description"/>
+          <value name="description"></value>
           <Boolean name="isRequired">true</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
@@ -147,7 +148,7 @@
           <value name="name">language</value>
           <value name="source">FORMDATA</value>
           <value name="type">STRING</value>
-          <null name="description"/>
+          <value name="description"></value>
           <Boolean name="isRequired">false</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
@@ -159,7 +160,7 @@
           <value name="name">transactionID</value>
           <value name="source">FORMDATA</value>
           <value name="type">STRING</value>
-          <null name="description"/>
+          <value name="description"></value>
           <Boolean name="isRequired">true</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
@@ -171,7 +172,7 @@
           <value name="name">sourceApplication</value>
           <value name="source">FORMDATA</value>
           <value name="type">STRING</value>
-          <null name="description"/>
+          <value name="description"></value>
           <Boolean name="isRequired">true</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
@@ -183,7 +184,7 @@
           <value name="name">targetApplication</value>
           <value name="source">FORMDATA</value>
           <value name="type">STRING</value>
-          <null name="description"/>
+          <value name="description"></value>
           <Boolean name="isRequired">true</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
@@ -195,7 +196,7 @@
           <value name="name">transactionDate</value>
           <value name="source">FORMDATA</value>
           <value name="type">STRING</value>
-          <null name="description"/>
+          <value name="description"></value>
           <Boolean name="isRequired">true</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
@@ -216,7 +217,7 @@
           <value name="name">header</value>
           <value name="source">BODY</value>
           <value name="type">REFERENCE</value>
-          <null name="description"/>
+          <value name="description"></value>
           <Boolean name="isRequired">true</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
@@ -228,7 +229,7 @@
           <value name="name">body</value>
           <value name="source">BODY</value>
           <value name="type">REFERENCE</value>
-          <null name="description"/>
+          <value name="description"></value>
           <Boolean name="isRequired">true</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
@@ -249,7 +250,7 @@
           <value name="name">success</value>
           <value name="source">FORMDATA</value>
           <value name="type">STRING</value>
-          <null name="description"/>
+          <value name="description"></value>
           <Boolean name="isRequired">true</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
@@ -261,7 +262,7 @@
           <value name="name">statusCode</value>
           <value name="source">FORMDATA</value>
           <value name="type">STRING</value>
-          <null name="description"/>
+          <value name="description"></value>
           <Boolean name="isRequired">true</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
@@ -273,7 +274,7 @@
           <value name="name">statusMessage</value>
           <value name="source">FORMDATA</value>
           <value name="type">STRING</value>
-          <null name="description"/>
+          <value name="description"></value>
           <Boolean name="isRequired">false</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
@@ -294,7 +295,7 @@
           <value name="name">idn</value>
           <value name="source">FORMDATA</value>
           <value name="type">STRING</value>
-          <null name="description"/>
+          <value name="description"></value>
           <Boolean name="isRequired">true</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
@@ -306,7 +307,7 @@
           <value name="name">visitDateTimeStr</value>
           <value name="source">FORMDATA</value>
           <value name="type">STRING</value>
-          <null name="description"/>
+          <value name="description"></value>
           <Boolean name="isRequired">true</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
@@ -318,7 +319,7 @@
           <value name="name">benefitTypes</value>
           <value name="source">FORMDATA</value>
           <value name="type">STRING</value>
-          <null name="description"/>
+          <value name="description"></value>
           <Boolean name="isRequired">true</Boolean>
           <Boolean name="isArray">true</Boolean>
           <null name="defaultValue"/>
@@ -339,7 +340,7 @@
           <value name="name">errorCode</value>
           <value name="source">FORMDATA</value>
           <value name="type">STRING</value>
-          <null name="description"/>
+          <value name="description"></value>
           <Boolean name="isRequired">true</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
@@ -351,7 +352,7 @@
           <value name="name">errorMessage</value>
           <value name="source">FORMDATA</value>
           <value name="type">STRING</value>
-          <null name="description"/>
+          <value name="description"></value>
           <Boolean name="isRequired">false</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
@@ -363,7 +364,7 @@
           <value name="name">detailedMessage</value>
           <value name="source">FORMDATA</value>
           <value name="type">STRING</value>
-          <null name="description"/>
+          <value name="description"></value>
           <Boolean name="isRequired">false</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
@@ -384,7 +385,7 @@
           <value name="name">capping</value>
           <value name="source">FORMDATA</value>
           <value name="type">STRING</value>
-          <null name="description"/>
+          <value name="description"></value>
           <Boolean name="isRequired">true</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
@@ -396,7 +397,7 @@
           <value name="name">coins</value>
           <value name="source">FORMDATA</value>
           <value name="type">STRING</value>
-          <null name="description"/>
+          <value name="description"></value>
           <Boolean name="isRequired">true</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
@@ -408,7 +409,7 @@
           <value name="name">copay</value>
           <value name="source">FORMDATA</value>
           <value name="type">STRING</value>
-          <null name="description"/>
+          <value name="description"></value>
           <Boolean name="isRequired">true</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
@@ -420,7 +421,7 @@
           <value name="name">limitPerDay</value>
           <value name="source">FORMDATA</value>
           <value name="type">STRING</value>
-          <null name="description"/>
+          <value name="description"></value>
           <Boolean name="isRequired">true</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
@@ -432,7 +433,7 @@
           <value name="name">name</value>
           <value name="source">FORMDATA</value>
           <value name="type">STRING</value>
-          <null name="description"/>
+          <value name="description"></value>
           <Boolean name="isRequired">true</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
@@ -444,7 +445,7 @@
           <value name="name">schemeId</value>
           <value name="source">FORMDATA</value>
           <value name="type">STRING</value>
-          <null name="description"/>
+          <value name="description"></value>
           <Boolean name="isRequired">true</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
@@ -456,7 +457,7 @@
           <value name="name">visitPerDay</value>
           <value name="source">FORMDATA</value>
           <value name="type">STRING</value>
-          <null name="description"/>
+          <value name="description"></value>
           <Boolean name="isRequired">true</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
@@ -477,7 +478,7 @@
           <value name="name">memberList</value>
           <value name="source">BODY</value>
           <value name="type">REFERENCE</value>
-          <null name="description"/>
+          <value name="description"></value>
           <Boolean name="isRequired">false</Boolean>
           <Boolean name="isArray">true</Boolean>
           <null name="defaultValue"/>
@@ -489,7 +490,7 @@
           <value name="name">error</value>
           <value name="source">BODY</value>
           <value name="type">REFERENCE</value>
-          <null name="description"/>
+          <value name="description"></value>
           <Boolean name="isRequired">false</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
@@ -510,7 +511,7 @@
           <value name="name">currency</value>
           <value name="source">BODY</value>
           <value name="type">REFERENCE</value>
-          <null name="description"/>
+          <value name="description"></value>
           <Boolean name="isRequired">true</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
@@ -522,7 +523,7 @@
           <value name="name">idn</value>
           <value name="source">FORMDATA</value>
           <value name="type">STRING</value>
-          <null name="description"/>
+          <value name="description"></value>
           <Boolean name="isRequired">true</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
@@ -534,7 +535,7 @@
           <value name="name">name</value>
           <value name="source">FORMDATA</value>
           <value name="type">STRING</value>
-          <null name="description"/>
+          <value name="description"></value>
           <Boolean name="isRequired">true</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
@@ -546,7 +547,7 @@
           <value name="name">scheme</value>
           <value name="source">BODY</value>
           <value name="type">REFERENCE</value>
-          <null name="description"/>
+          <value name="description"></value>
           <Boolean name="isRequired">true</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
@@ -558,7 +559,7 @@
           <value name="name">visitDateTimeStr</value>
           <value name="source">FORMDATA</value>
           <value name="type">STRING</value>
-          <null name="description"/>
+          <value name="description"></value>
           <Boolean name="isRequired">true</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
@@ -579,7 +580,7 @@
           <value name="name">code</value>
           <value name="source">FORMDATA</value>
           <value name="type">STRING</value>
-          <null name="description"/>
+          <value name="description"></value>
           <Boolean name="isRequired">true</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
@@ -600,7 +601,7 @@
           <value name="name">header</value>
           <value name="source">BODY</value>
           <value name="type">REFERENCE</value>
-          <null name="description"/>
+          <value name="description"></value>
           <Boolean name="isRequired">true</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
@@ -612,7 +613,7 @@
           <value name="name">body</value>
           <value name="source">BODY</value>
           <value name="type">REFERENCE</value>
-          <null name="description"/>
+          <value name="description"></value>
           <Boolean name="isRequired">true</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>

@@ -46,8 +46,58 @@
   <value name="svc_in_validator_options">none</value>
   <value name="svc_out_validator_options">none</value>
   <value name="auditoption">2</value>
-  <null name="auditfields_input"/>
-  <null name="auditfields_output"/>
+  <array name="auditfields_input" type="value" depth="2">
+    <array type="value" depth="1">
+      <value>/header;4;0;FHGCanonical.common:requestHeader/language;1;0</value>
+      <value>language</value>
+    </array>
+    <array type="value" depth="1">
+      <value>/header;4;0;FHGCanonical.common:requestHeader/transactionID;1;0</value>
+      <value>transactionID</value>
+    </array>
+    <array type="value" depth="1">
+      <value>/header;4;0;FHGCanonical.common:requestHeader/targetApplication;1;0</value>
+      <value>targetApplication</value>
+    </array>
+    <array type="value" depth="1">
+      <value>/header;4;0;FHGCanonical.common:requestHeader/sessionId;1;0</value>
+      <value>sessionId</value>
+    </array>
+    <array type="value" depth="1">
+      <value>/header;4;0;FHGCanonical.common:requestHeader/country;1;0</value>
+      <value>country</value>
+    </array>
+    <array type="value" depth="1">
+      <value>/header;4;0;FHGCanonical.common:requestHeader/sourceApplication;1;0</value>
+      <value>sourceApplication</value>
+    </array>
+  </array>
+  <array name="auditfields_output" type="value" depth="2">
+    <array type="value" depth="1">
+      <value>/body;2;0/error;4;0;FHGCanonical.common:errorDocument/errorCode;1;0</value>
+      <value>errorCode</value>
+    </array>
+    <array type="value" depth="1">
+      <value>/body;2;0/error;4;0;FHGCanonical.common:errorDocument/errorMessage;1;0</value>
+      <value>errorMessage</value>
+    </array>
+    <array type="value" depth="1">
+      <value>/header;4;0;FHGCanonical.common:responseHeader/statusCode;1;0</value>
+      <value>statusCode</value>
+    </array>
+    <array type="value" depth="1">
+      <value>/header;4;0;FHGCanonical.common:responseHeader/statusMessage;1;0</value>
+      <value>statusMessage</value>
+    </array>
+    <array type="value" depth="1">
+      <value>/header;4;0;FHGCanonical.common:responseHeader/success;1;0</value>
+      <value>success</value>
+    </array>
+    <array type="value" depth="1">
+      <value>/body;2;0/error;4;0;FHGCanonical.common:errorDocument/detailedMessage;1;0</value>
+      <value>detailedMessage</value>
+    </array>
+  </array>
   <record name="auditsettings" javaclass="com.wm.util.Values">
     <value name="document_data">0</value>
     <value name="startExecution">false</value>
