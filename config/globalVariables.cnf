@@ -30,7 +30,7 @@
       </record>
       <record javaclass="com.wm.data.ISMemDataImpl">
         <value name="key">v01.authenticate.success</value>
-        <value name="value">True</value>
+        <value name="value">true</value>
         <value name="isSecure">false</value>
       </record>
       <record javaclass="com.wm.data.ISMemDataImpl">
@@ -40,12 +40,7 @@
       </record>
       <record javaclass="com.wm.data.ISMemDataImpl">
         <value name="key">v01.authenticate.failure</value>
-        <value name="value">False</value>
-        <value name="isSecure">false</value>
-      </record>
-      <record javaclass="com.wm.data.ISMemDataImpl">
-        <value name="key">.authenticate.failurestatus</value>
-        <value name="value">Failed</value>
+        <value name="value">false</value>
         <value name="isSecure">false</value>
       </record>
       <record javaclass="com.wm.data.ISMemDataImpl">
@@ -120,7 +115,7 @@
       </record>
       <record javaclass="com.wm.data.ISMemDataImpl">
         <value name="key">v01.verifyMember.failure</value>
-        <value name="value">False</value>
+        <value name="value">false</value>
         <value name="isSecure">false</value>
       </record>
       <record javaclass="com.wm.data.ISMemDataImpl">
@@ -130,7 +125,7 @@
       </record>
       <record javaclass="com.wm.data.ISMemDataImpl">
         <value name="key">v01.verifyMember.success</value>
-        <value name="value">True</value>
+        <value name="value">true</value>
         <value name="isSecure">false</value>
       </record>
       <record javaclass="com.wm.data.ISMemDataImpl">
