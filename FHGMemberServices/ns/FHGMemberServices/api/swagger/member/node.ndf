@@ -47,12 +47,10 @@
         <record name="POST" javaclass="com.wm.util.Values">
           <value name="operationType">POST</value>
           <value name="nsName">/verify_POST</value>
-          <value name="description"></value>
           <array name="requiredDefinitions" type="value" depth="1">
-            <value>FHGCanonical.docs:verifyMemberRequest</value>
             <value>FHGCanonical.common:requestHeader</value>
             <value>FHGCanonical.docs:verifyMemberFHN3Request</value>
-            <value>FHGCanonical.docs:verifyMemberResponse</value>
+            <value>/verify_POST_bodyParameters</value>
             <value>FHGCanonical.common:responseHeader</value>
             <value>/verify_POST.body</value>
             <value>FHGCanonical.common:errorDocument</value>
@@ -62,16 +60,16 @@
             <value>/verify_POST_$response</value>
           </array>
           <record name="parameters" javaclass="com.wm.util.Values">
-            <record name="verifyMemberRequest" javaclass="com.wm.util.Values">
-              <value name="name">verifyMemberRequest</value>
+            <record name="bodyParameters" javaclass="com.wm.util.Values">
+              <value name="name">bodyParameters</value>
               <value name="source">BODY</value>
               <value name="type">REFERENCE</value>
-              <value name="description"></value>
+              <null name="description"/>
               <Boolean name="isRequired">true</Boolean>
               <Boolean name="isArray">false</Boolean>
               <null name="defaultValue"/>
-              <value name="refDefinition">FHGCanonical.docs:verifyMemberRequest</value>
-              <value name="definitionName">verifyMemberRequest</value>
+              <value name="refDefinition">/verify_POST_bodyParameters</value>
+              <value name="definitionName">verify_POST_bodyParameters</value>
               <Boolean name="includeInRad">true</Boolean>
             </record>
           </record>
@@ -93,10 +91,20 @@
               <value name="description">Successful</value>
               <Boolean name="returnOutput">true</Boolean>
             </record>
+            <record name="400" javaclass="com.wm.util.Values">
+              <value name="statusCode">400</value>
+              <value name="description">Transaction_id missing</value>
+              <Boolean name="returnOutput">true</Boolean>
+            </record>
             <record name="401" javaclass="com.wm.util.Values">
               <value name="statusCode">401</value>
               <value name="description">Access Denied</value>
-              <Boolean name="returnOutput">false</Boolean>
+              <Boolean name="returnOutput">true</Boolean>
+            </record>
+            <record name="500" javaclass="com.wm.util.Values">
+              <value name="statusCode">500</value>
+              <value name="description">member not found in FHN3 or Transaction_id missing</value>
+              <Boolean name="returnOutput">true</Boolean>
             </record>
           </record>
         </record>
@@ -115,7 +123,7 @@
           <value name="name">sessionId</value>
           <value name="source">FORMDATA</value>
           <value name="type">STRING</value>
-          <value name="description"></value>
+          <null name="description"/>
           <Boolean name="isRequired">true</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
@@ -127,7 +135,7 @@
           <value name="name">country</value>
           <value name="source">FORMDATA</value>
           <value name="type">STRING</value>
-          <value name="description"></value>
+          <null name="description"/>
           <Boolean name="isRequired">true</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
@@ -139,7 +147,7 @@
           <value name="name">language</value>
           <value name="source">FORMDATA</value>
           <value name="type">STRING</value>
-          <value name="description"></value>
+          <null name="description"/>
           <Boolean name="isRequired">false</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
@@ -151,7 +159,7 @@
           <value name="name">transactionID</value>
           <value name="source">FORMDATA</value>
           <value name="type">STRING</value>
-          <value name="description"></value>
+          <null name="description"/>
           <Boolean name="isRequired">true</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
@@ -163,7 +171,7 @@
           <value name="name">sourceApplication</value>
           <value name="source">FORMDATA</value>
           <value name="type">STRING</value>
-          <value name="description"></value>
+          <null name="description"/>
           <Boolean name="isRequired">true</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
@@ -175,7 +183,7 @@
           <value name="name">targetApplication</value>
           <value name="source">FORMDATA</value>
           <value name="type">STRING</value>
-          <value name="description"></value>
+          <null name="description"/>
           <Boolean name="isRequired">true</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
@@ -187,12 +195,45 @@
           <value name="name">transactionDate</value>
           <value name="source">FORMDATA</value>
           <value name="type">STRING</value>
-          <value name="description"></value>
+          <null name="description"/>
           <Boolean name="isRequired">true</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
           <null name="refDefinition"/>
           <null name="definitionName"/>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+      </record>
+    </record>
+    <record name="/verify_POST_bodyParameters" javaclass="com.wm.util.Values">
+      <value name="name">verify_POST_bodyParameters</value>
+      <value name="nsName">/verify_POST_bodyParameters</value>
+      <Boolean name="autoGenerated">true</Boolean>
+      <Boolean name="recursive">false</Boolean>
+      <null name="description"/>
+      <record name="parameters" javaclass="com.wm.util.Values">
+        <record name="header" javaclass="com.wm.util.Values">
+          <value name="name">header</value>
+          <value name="source">BODY</value>
+          <value name="type">REFERENCE</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <value name="refDefinition">FHGCanonical.common:requestHeader</value>
+          <value name="definitionName">requestHeader</value>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">body</value>
+          <value name="source">BODY</value>
+          <value name="type">REFERENCE</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <value name="refDefinition">FHGCanonical.docs:verifyMemberFHN3Request</value>
+          <value name="definitionName">verifyMemberFHN3Request</value>
           <Boolean name="includeInRad">true</Boolean>
         </record>
       </record>
@@ -208,7 +249,7 @@
           <value name="name">success</value>
           <value name="source">FORMDATA</value>
           <value name="type">STRING</value>
-          <value name="description"></value>
+          <null name="description"/>
           <Boolean name="isRequired">true</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
@@ -220,7 +261,7 @@
           <value name="name">statusCode</value>
           <value name="source">FORMDATA</value>
           <value name="type">STRING</value>
-          <value name="description"></value>
+          <null name="description"/>
           <Boolean name="isRequired">true</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
@@ -232,7 +273,7 @@
           <value name="name">statusMessage</value>
           <value name="source">FORMDATA</value>
           <value name="type">STRING</value>
-          <value name="description"></value>
+          <null name="description"/>
           <Boolean name="isRequired">false</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
@@ -253,7 +294,7 @@
           <value name="name">idn</value>
           <value name="source">FORMDATA</value>
           <value name="type">STRING</value>
-          <value name="description"></value>
+          <null name="description"/>
           <Boolean name="isRequired">true</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
@@ -265,7 +306,7 @@
           <value name="name">visitDateTimeStr</value>
           <value name="source">FORMDATA</value>
           <value name="type">STRING</value>
-          <value name="description"></value>
+          <null name="description"/>
           <Boolean name="isRequired">true</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
@@ -277,7 +318,7 @@
           <value name="name">benefitTypes</value>
           <value name="source">FORMDATA</value>
           <value name="type">STRING</value>
-          <value name="description"></value>
+          <null name="description"/>
           <Boolean name="isRequired">true</Boolean>
           <Boolean name="isArray">true</Boolean>
           <null name="defaultValue"/>
@@ -298,7 +339,7 @@
           <value name="name">errorCode</value>
           <value name="source">FORMDATA</value>
           <value name="type">STRING</value>
-          <value name="description"></value>
+          <null name="description"/>
           <Boolean name="isRequired">true</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
@@ -310,7 +351,7 @@
           <value name="name">errorMessage</value>
           <value name="source">FORMDATA</value>
           <value name="type">STRING</value>
-          <value name="description"></value>
+          <null name="description"/>
           <Boolean name="isRequired">false</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
@@ -322,7 +363,7 @@
           <value name="name">detailedMessage</value>
           <value name="source">FORMDATA</value>
           <value name="type">STRING</value>
-          <value name="description"></value>
+          <null name="description"/>
           <Boolean name="isRequired">false</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
@@ -343,7 +384,7 @@
           <value name="name">capping</value>
           <value name="source">FORMDATA</value>
           <value name="type">STRING</value>
-          <value name="description"></value>
+          <null name="description"/>
           <Boolean name="isRequired">true</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
@@ -355,7 +396,7 @@
           <value name="name">coins</value>
           <value name="source">FORMDATA</value>
           <value name="type">STRING</value>
-          <value name="description"></value>
+          <null name="description"/>
           <Boolean name="isRequired">true</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
@@ -367,7 +408,7 @@
           <value name="name">copay</value>
           <value name="source">FORMDATA</value>
           <value name="type">STRING</value>
-          <value name="description"></value>
+          <null name="description"/>
           <Boolean name="isRequired">true</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
@@ -379,7 +420,7 @@
           <value name="name">limitPerDay</value>
           <value name="source">FORMDATA</value>
           <value name="type">STRING</value>
-          <value name="description"></value>
+          <null name="description"/>
           <Boolean name="isRequired">true</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
@@ -391,7 +432,7 @@
           <value name="name">name</value>
           <value name="source">FORMDATA</value>
           <value name="type">STRING</value>
-          <value name="description"></value>
+          <null name="description"/>
           <Boolean name="isRequired">true</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
@@ -403,7 +444,7 @@
           <value name="name">schemeId</value>
           <value name="source">FORMDATA</value>
           <value name="type">STRING</value>
-          <value name="description"></value>
+          <null name="description"/>
           <Boolean name="isRequired">true</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
@@ -415,45 +456,12 @@
           <value name="name">visitPerDay</value>
           <value name="source">FORMDATA</value>
           <value name="type">STRING</value>
-          <value name="description"></value>
+          <null name="description"/>
           <Boolean name="isRequired">true</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
           <null name="refDefinition"/>
           <null name="definitionName"/>
-          <Boolean name="includeInRad">true</Boolean>
-        </record>
-      </record>
-    </record>
-    <record name="FHGCanonical.docs:verifyMemberResponse" javaclass="com.wm.util.Values">
-      <value name="name">verifyMemberResponse</value>
-      <value name="nsName">FHGCanonical.docs:verifyMemberResponse</value>
-      <Boolean name="autoGenerated">false</Boolean>
-      <Boolean name="recursive">false</Boolean>
-      <null name="description"/>
-      <record name="parameters" javaclass="com.wm.util.Values">
-        <record name="header" javaclass="com.wm.util.Values">
-          <value name="name">header</value>
-          <value name="source">BODY</value>
-          <value name="type">REFERENCE</value>
-          <value name="description"></value>
-          <Boolean name="isRequired">true</Boolean>
-          <Boolean name="isArray">false</Boolean>
-          <null name="defaultValue"/>
-          <value name="refDefinition">FHGCanonical.common:responseHeader</value>
-          <value name="definitionName">responseHeader</value>
-          <Boolean name="includeInRad">true</Boolean>
-        </record>
-        <record name="body" javaclass="com.wm.util.Values">
-          <value name="name">body</value>
-          <value name="source">BODY</value>
-          <value name="type">REFERENCE</value>
-          <value name="description"></value>
-          <Boolean name="isRequired">true</Boolean>
-          <Boolean name="isArray">false</Boolean>
-          <null name="defaultValue"/>
-          <value name="refDefinition">/verify_POST.body</value>
-          <value name="definitionName">body</value>
           <Boolean name="includeInRad">true</Boolean>
         </record>
       </record>
@@ -469,7 +477,7 @@
           <value name="name">memberList</value>
           <value name="source">BODY</value>
           <value name="type">REFERENCE</value>
-          <value name="description"></value>
+          <null name="description"/>
           <Boolean name="isRequired">false</Boolean>
           <Boolean name="isArray">true</Boolean>
           <null name="defaultValue"/>
@@ -481,7 +489,7 @@
           <value name="name">error</value>
           <value name="source">BODY</value>
           <value name="type">REFERENCE</value>
-          <value name="description"></value>
+          <null name="description"/>
           <Boolean name="isRequired">false</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
@@ -502,7 +510,7 @@
           <value name="name">currency</value>
           <value name="source">BODY</value>
           <value name="type">REFERENCE</value>
-          <value name="description"></value>
+          <null name="description"/>
           <Boolean name="isRequired">true</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
@@ -514,7 +522,7 @@
           <value name="name">idn</value>
           <value name="source">FORMDATA</value>
           <value name="type">STRING</value>
-          <value name="description"></value>
+          <null name="description"/>
           <Boolean name="isRequired">true</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
@@ -526,7 +534,7 @@
           <value name="name">name</value>
           <value name="source">FORMDATA</value>
           <value name="type">STRING</value>
-          <value name="description"></value>
+          <null name="description"/>
           <Boolean name="isRequired">true</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
@@ -538,7 +546,7 @@
           <value name="name">scheme</value>
           <value name="source">BODY</value>
           <value name="type">REFERENCE</value>
-          <value name="description"></value>
+          <null name="description"/>
           <Boolean name="isRequired">true</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
@@ -550,7 +558,7 @@
           <value name="name">visitDateTimeStr</value>
           <value name="source">FORMDATA</value>
           <value name="type">STRING</value>
-          <value name="description"></value>
+          <null name="description"/>
           <Boolean name="isRequired">true</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
@@ -571,45 +579,12 @@
           <value name="name">code</value>
           <value name="source">FORMDATA</value>
           <value name="type">STRING</value>
-          <value name="description"></value>
+          <null name="description"/>
           <Boolean name="isRequired">true</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
           <null name="refDefinition"/>
           <null name="definitionName"/>
-          <Boolean name="includeInRad">true</Boolean>
-        </record>
-      </record>
-    </record>
-    <record name="FHGCanonical.docs:verifyMemberRequest" javaclass="com.wm.util.Values">
-      <value name="name">verifyMemberRequest</value>
-      <value name="nsName">FHGCanonical.docs:verifyMemberRequest</value>
-      <Boolean name="autoGenerated">false</Boolean>
-      <Boolean name="recursive">false</Boolean>
-      <null name="description"/>
-      <record name="parameters" javaclass="com.wm.util.Values">
-        <record name="header" javaclass="com.wm.util.Values">
-          <value name="name">header</value>
-          <value name="source">BODY</value>
-          <value name="type">REFERENCE</value>
-          <value name="description"></value>
-          <Boolean name="isRequired">true</Boolean>
-          <Boolean name="isArray">false</Boolean>
-          <null name="defaultValue"/>
-          <value name="refDefinition">FHGCanonical.common:requestHeader</value>
-          <value name="definitionName">requestHeader</value>
-          <Boolean name="includeInRad">true</Boolean>
-        </record>
-        <record name="body" javaclass="com.wm.util.Values">
-          <value name="name">body</value>
-          <value name="source">BODY</value>
-          <value name="type">REFERENCE</value>
-          <value name="description"></value>
-          <Boolean name="isRequired">true</Boolean>
-          <Boolean name="isArray">false</Boolean>
-          <null name="defaultValue"/>
-          <value name="refDefinition">FHGCanonical.docs:verifyMemberFHN3Request</value>
-          <value name="definitionName">verifyMemberFHN3Request</value>
           <Boolean name="includeInRad">true</Boolean>
         </record>
       </record>
@@ -621,16 +596,28 @@
       <Boolean name="recursive">false</Boolean>
       <null name="description"/>
       <record name="parameters" javaclass="com.wm.util.Values">
-        <record name="verifyMemberResponse" javaclass="com.wm.util.Values">
-          <value name="name">verifyMemberResponse</value>
+        <record name="header" javaclass="com.wm.util.Values">
+          <value name="name">header</value>
           <value name="source">BODY</value>
           <value name="type">REFERENCE</value>
-          <value name="description"></value>
+          <null name="description"/>
           <Boolean name="isRequired">true</Boolean>
           <Boolean name="isArray">false</Boolean>
           <null name="defaultValue"/>
-          <value name="refDefinition">FHGCanonical.docs:verifyMemberResponse</value>
-          <value name="definitionName">verifyMemberResponse</value>
+          <value name="refDefinition">FHGCanonical.common:responseHeader</value>
+          <value name="definitionName">responseHeader</value>
+          <Boolean name="includeInRad">true</Boolean>
+        </record>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">body</value>
+          <value name="source">BODY</value>
+          <value name="type">REFERENCE</value>
+          <null name="description"/>
+          <Boolean name="isRequired">true</Boolean>
+          <Boolean name="isArray">false</Boolean>
+          <null name="defaultValue"/>
+          <value name="refDefinition">/verify_POST.body</value>
+          <value name="definitionName">body</value>
           <Boolean name="includeInRad">true</Boolean>
         </record>
       </record>
