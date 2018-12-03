@@ -37,4 +37,5 @@
   <null name="originUri"/>
   <value name="resourceName">utilities</value>
   <Boolean name="modifiable">true</Boolean>
+  <value name="assocdoctypename">FHGUtilities.api.resources.utilities_.docTypes:utilities</value>
 </Values>
