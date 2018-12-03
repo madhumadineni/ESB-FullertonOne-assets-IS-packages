@@ -36,6 +36,7 @@ public final class config
 		// [i] field:0:required configKey
 		// [o] field:0:required configValue
 		// pipeline
+		
 		IDataCursor pipelineCursor = pipeline.getCursor();
 			String	configKey = IDataUtil.getString( pipelineCursor, "configKey" );
 		pipelineCursor.destroy();
