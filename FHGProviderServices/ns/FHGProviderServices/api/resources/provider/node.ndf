@@ -30,4 +30,5 @@
   <null name="originUri"/>
   <value name="resourceName">provider</value>
   <Boolean name="modifiable">true</Boolean>
+  <value name="assocdoctypename">FHGProviderServices.api.resources.provider_.docTypes:provider</value>
 </Values>
