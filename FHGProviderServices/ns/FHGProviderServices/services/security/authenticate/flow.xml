@@ -130,6 +130,47 @@
         <value name="rec_closed">true</value>
         <value name="modifiable">true</value>
       </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">authenticate_POST_bodyParameters</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <array name="rec_fields" type="record" depth="1">
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">record</value>
+            <value name="node_subtype">unknown</value>
+            <value name="is_public">false</value>
+            <value name="field_name">header</value>
+            <value name="field_type">recref</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">true</value>
+            <value name="form_qualified">false</value>
+            <value name="is_global">false</value>
+            <value name="modifiable">true</value>
+            <value name="rec_ref">FHGCanonical.common:requestHeader</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">record</value>
+            <value name="node_subtype">unknown</value>
+            <value name="is_public">false</value>
+            <value name="field_name">body</value>
+            <value name="field_type">record</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">true</value>
+            <value name="form_qualified">false</value>
+            <value name="is_global">false</value>
+            <array name="rec_fields" type="record" depth="1">
+            </array>
+            <value name="modifiable">true</value>
+          </record>
+        </array>
+        <value name="modifiable">true</value>
+      </record>
     </array>
     <value name="modifiable">true</value>
   </record>
@@ -138,16 +179,25 @@
 
   <!-- nodes -->
 
-<MAPCOPY FROM="/header;4;0;FHGCanonical.common:requestHeader" TO="/authenticateRequest;4;0;FHGCanonical.docs:authenticateRequest/header;4;0;FHGCanonical.common:requestHeader">
+<MAPCOPY FROM="/header;4;0;FHGCanonical.common:requestHeader" TO="/authenticateRequest;4;0;FHGCanonical.docs:authenticateRequest/header;4;0;FHGCanonical.common:requestHeader" CONDITION="%header%!=null">
 </MAPCOPY>
 
-<MAPCOPY FROM="/body;2;0" TO="/authenticateRequest;4;0;FHGCanonical.docs:authenticateRequest/body;2;0">
+<MAPCOPY FROM="/body;2;0" TO="/authenticateRequest;4;0;FHGCanonical.docs:authenticateRequest/body;2;0" CONDITION="%body%!=null">
 </MAPCOPY>
 
 <MAPDELETE FIELD="/header;4;0;FHGCanonical.common:requestHeader">
 </MAPDELETE>
 
 <MAPDELETE FIELD="/body;2;0">
+</MAPDELETE>
+
+<MAPCOPY FROM="/authenticate_POST_bodyParameters;2;0/header;4;0;FHGCanonical.common:requestHeader" TO="/authenticateRequest;4;0;FHGCanonical.docs:authenticateRequest/header;4;0;FHGCanonical.common:requestHeader" CONDITION="%authenticate_POST_bodyParameters/header%!=null">
+</MAPCOPY>
+
+<MAPCOPY FROM="/authenticate_POST_bodyParameters;2;0/body;2;0" TO="/authenticateRequest;4;0;FHGCanonical.docs:authenticateRequest/body;2;0" CONDITION="%authenticate_POST_bodyParameters/body%!=null">
+</MAPCOPY>
+
+<MAPDELETE FIELD="/authenticate_POST_bodyParameters;2;0">
 </MAPDELETE>
 </MAP>
 

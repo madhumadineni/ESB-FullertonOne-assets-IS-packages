@@ -74,14 +74,6 @@
   </array>
   <array name="auditfields_output" type="value" depth="2">
     <array type="value" depth="1">
-      <value>/body;2;0/error;4;0;FHGCanonical.common:errorDocument/errorCode;1;0</value>
-      <value>errorCode</value>
-    </array>
-    <array type="value" depth="1">
-      <value>/body;2;0/error;4;0;FHGCanonical.common:errorDocument/errorMessage;1;0</value>
-      <value>errorMessage</value>
-    </array>
-    <array type="value" depth="1">
       <value>/header;4;0;FHGCanonical.common:responseHeader/statusCode;1;0</value>
       <value>statusCode</value>
     </array>
@@ -92,6 +84,14 @@
     <array type="value" depth="1">
       <value>/header;4;0;FHGCanonical.common:responseHeader/success;1;0</value>
       <value>success</value>
+    </array>
+    <array type="value" depth="1">
+      <value>/body;2;0/error;4;0;FHGCanonical.common:errorDocument/errorCode;1;0</value>
+      <value>errorCode</value>
+    </array>
+    <array type="value" depth="1">
+      <value>/body;2;0/error;4;0;FHGCanonical.common:errorDocument/errorMessage;1;0</value>
+      <value>errorMessage</value>
     </array>
     <array type="value" depth="1">
       <value>/body;2;0/error;4;0;FHGCanonical.common:errorDocument/detailedMessage;1;0</value>
@@ -124,7 +124,7 @@
     <value>PUT</value>
     <value>PATCH</value>
   </array>
-  <value name="pipeline_option">1</value>
+  <value name="pipeline_option">3</value>
   <null name="originURI"/>
   <value name="modifiable">true</value>
   <value name="is_public">false</value>
