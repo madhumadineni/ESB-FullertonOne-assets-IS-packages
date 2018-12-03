@@ -23,4 +23,5 @@
   <null name="originUri"/>
   <value name="resourceName">member</value>
   <Boolean name="modifiable">true</Boolean>
+  <value name="assocdoctypename">FHGMemberServices.api.resources.member_.docTypes:member</value>
 </Values>
