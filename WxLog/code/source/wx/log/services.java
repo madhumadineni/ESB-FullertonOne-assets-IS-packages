@@ -64,68 +64,69 @@ public final class services
 		// [i] field:0:optional text
 		// [i] field:0:optional level {"ERROR","WARN","INFO","DEBUG","TRACE"}
 		// [i] record:0:optional mdc
-	IDataCursor pipelineCursor = pipeline.getCursor();
-	String logger      	= IDataUtil.getString(pipelineCursor, "logger");
-	IData mdc 			= IDataUtil.getIData(pipelineCursor,  "mdc");
-	String messageID    = IDataUtil.getString(pipelineCursor, "id");
-	String level	 	= IDataUtil.getString(pipelineCursor, "level");
-	String message      = IDataUtil.getString(pipelineCursor, "text");
-
-	if ((messageID == null || messageID.isEmpty()) && 
-	    (message == null || message.isEmpty())) {
-		com.wm.util.JournalLogger.log( com.wm.util.JournalLogger.INFO,
-                com.wm.util.JournalLogger.FAC_FLOW_SVC,
-                com.wm.util.JournalLogger.ERROR,
-                "wx.log.services:log called without either /id, or /text inputs. One is required." );				
-		return;
-	}
-	
-	pipelineCursor.destroy();
-	
-	// Clear MDC if this thread was recycled
-	conditionallyClearMDC();
-
-	// Default to INFO if no level was provided
-	if (level == null || level.isEmpty()) {
-		level = DEFAULT_LEVEL;
-	}
-
-	// Put *temporary* metadata in MDC
-	putMDC(mdc);
-	
-	// Get message catalog resource bundle from package's resource/ dir
-	if (messageID != null) {
-		ResourceBundle resources = getResourceBundle();
-		try {
-			message = resources.getString(messageID + ".text");
-		} catch (Exception e) {
-			com.wm.util.JournalLogger.log( com.wm.util.JournalLogger.INFO,
-	                com.wm.util.JournalLogger.FAC_FLOW_SVC,
-	                com.wm.util.JournalLogger.ERROR,
-	                "WxLog: " + e.toString());				
-	        return;
-		}
+			
+		IDataCursor pipelineCursor = pipeline.getCursor();
+			String logger      	= IDataUtil.getString(pipelineCursor, "logger");
+			IData mdc 			= IDataUtil.getIData(pipelineCursor,  "mdc");
+			String messageID    = IDataUtil.getString(pipelineCursor, "id");
+			String level	 	= IDataUtil.getString(pipelineCursor, "level");
+			String message      = IDataUtil.getString(pipelineCursor, "text");
+		
+			if ((messageID == null || messageID.isEmpty()) && 
+			    (message == null || message.isEmpty())) {
+				com.wm.util.JournalLogger.log( com.wm.util.JournalLogger.INFO,
+		                com.wm.util.JournalLogger.FAC_FLOW_SVC,
+		                com.wm.util.JournalLogger.ERROR,
+		                "wx.log.services:log called without either /id, or /text inputs. One is required." );				
+				return;
+			}
+			
+			pipelineCursor.destroy();
+			
+			// Clear MDC if this thread was recycled
+			conditionallyClearMDC();
+		
+			// Default to INFO if no level was provided
+			if (level == null || level.isEmpty()) {
+				level = DEFAULT_LEVEL;
+			}
+		
+			// Put *temporary* metadata in MDC
+			putMDC(mdc);
+			
+			// Get message catalog resource bundle from package's resource/ dir
+			if (messageID != null) {
+				ResourceBundle resources = getResourceBundle();
+				try {
+					message = resources.getString(messageID + ".text");
+				} catch (Exception e) {
+					com.wm.util.JournalLogger.log( com.wm.util.JournalLogger.INFO,
+			                com.wm.util.JournalLogger.FAC_FLOW_SVC,
+			                com.wm.util.JournalLogger.ERROR,
+			                "WxLog: " + e.toString());				
+			        return;
+				}
+					try {
+			 		level = resources.getString(messageID + ".level");
+			 	} catch (Exception e) {
+			 		level = DEFAULT_LEVEL;
+			 	}
+			}
+		
 			try {
-	 		level = resources.getString(messageID + ".level");
-	 	} catch (Exception e) {
-	 		level = DEFAULT_LEVEL;
-	 	}
-	}
-
-	try {
-		Level.valueOf(level);
-	} catch (IllegalArgumentException e) {
-		level = DEFAULT_LEVEL;
-	}
-	
-	// Replace any ${variables} in the message with MDC values (if they exist)
-	message = substituteVariables(message);
-	
-	// Log the message
-	log(logger, message, Level.valueOf(level));
-	
-	// Remove the *temporary* metadata from MDC
-	removeMDC(mdc);
+				Level.valueOf(level);
+			} catch (IllegalArgumentException e) {
+				level = DEFAULT_LEVEL;
+			}
+			
+			// Replace any ${variables} in the message with MDC values (if they exist)
+			message = substituteVariables(message);
+			
+			// Log the message
+			log(logger, message, Level.valueOf(level));
+			
+			// Remove the *temporary* metadata from MDC
+			removeMDC(mdc);
 		// --- <<IS-END>> ---
 
                 
