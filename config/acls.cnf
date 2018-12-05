@@ -12,6 +12,66 @@
       <record name="deny" javaclass="com.wm.util.Values">
       </record>
     </record>
+    <record name="~VIEW~pq__WxMWSdevQA_93ad" javaclass="com.wm.app.b2b.server.ACLGroup">
+      <value name="name">~VIEW~pq__WxMWSdevQA_93ad</value>
+      <record name="allow" javaclass="com.wm.util.Values">
+      </record>
+      <record name="deny" javaclass="com.wm.util.Values">
+      </record>
+    </record>
+    <record name="Internal" javaclass="com.wm.app.b2b.server.ACLGroup">
+      <value name="name">Internal</value>
+      <record name="allow" javaclass="com.wm.util.Values">
+        <value name="local/Administrators">local/Administrators</value>
+        <value name="local/Developers">local/Developers</value>
+        <value name="system/ISDevelopers">system/ISDevelopers</value>
+      </record>
+      <record name="deny" javaclass="com.wm.util.Values">
+      </record>
+    </record>
+    <record name="~VIEW~pq__newDevNewQA_06a" javaclass="com.wm.app.b2b.server.ACLGroup">
+      <value name="name">~VIEW~pq__newDevNewQA_06a</value>
+      <record name="allow" javaclass="com.wm.util.Values">
+      </record>
+      <record name="deny" javaclass="com.wm.util.Values">
+      </record>
+    </record>
+    <record name="~EXTRACT~pq__olddevnewDev2packages_5ybg" javaclass="com.wm.app.b2b.server.ACLGroup">
+      <value name="name">~EXTRACT~pq__olddevnewDev2packages_5ybg</value>
+      <record name="allow" javaclass="com.wm.util.Values">
+      </record>
+      <record name="deny" javaclass="com.wm.util.Values">
+      </record>
+    </record>
+    <record name="~VIEW~pq__oldDevnewDev_q9a" javaclass="com.wm.app.b2b.server.ACLGroup">
+      <value name="name">~VIEW~pq__oldDevnewDev_q9a</value>
+      <record name="allow" javaclass="com.wm.util.Values">
+      </record>
+      <record name="deny" javaclass="com.wm.util.Values">
+      </record>
+    </record>
+    <record name="Anonymous" javaclass="com.wm.app.b2b.server.ACLGroup">
+      <value name="name">Anonymous</value>
+      <record name="allow" javaclass="com.wm.util.Values">
+        <value name="local/Everybody">local/Everybody</value>
+      </record>
+      <record name="deny" javaclass="com.wm.util.Values">
+      </record>
+    </record>
+    <record name="~DEPLOY~pq__oldQAMWSNewQAMWS_nlb" javaclass="com.wm.app.b2b.server.ACLGroup">
+      <value name="name">~DEPLOY~pq__oldQAMWSNewQAMWS_nlb</value>
+      <record name="allow" javaclass="com.wm.util.Values">
+      </record>
+      <record name="deny" javaclass="com.wm.util.Values">
+      </record>
+    </record>
+    <record name="~DEFINE~pq__oldQAMWSNewQAMWS_nlb" javaclass="com.wm.app.b2b.server.ACLGroup">
+      <value name="name">~DEFINE~pq__oldQAMWSNewQAMWS_nlb</value>
+      <record name="allow" javaclass="com.wm.util.Values">
+      </record>
+      <record name="deny" javaclass="com.wm.util.Values">
+      </record>
+    </record>
     <record name="DeployerAdmin" javaclass="com.wm.app.b2b.server.ACLGroup">
       <value name="name">DeployerAdmin</value>
       <record name="allow" javaclass="com.wm.util.Values">
@@ -28,12 +88,16 @@
       <record name="deny" javaclass="com.wm.util.Values">
       </record>
     </record>
-    <record name="Developers" javaclass="com.wm.app.b2b.server.ACLGroup">
-      <value name="name">Developers</value>
+    <record name="~DEFINE~pq__olddevnewDev2packages_5ybg" javaclass="com.wm.app.b2b.server.ACLGroup">
+      <value name="name">~DEFINE~pq__olddevnewDev2packages_5ybg</value>
       <record name="allow" javaclass="com.wm.util.Values">
-        <value name="local/Administrators">local/Administrators</value>
-        <value name="local/Developers">local/Developers</value>
-        <value name="system/ISDevelopers">system/ISDevelopers</value>
+      </record>
+      <record name="deny" javaclass="com.wm.util.Values">
+      </record>
+    </record>
+    <record name="~DEPLOY~pq__olddevnewDev2packages_5ybg" javaclass="com.wm.app.b2b.server.ACLGroup">
+      <value name="name">~DEPLOY~pq__olddevnewDev2packages_5ybg</value>
+      <record name="allow" javaclass="com.wm.util.Values">
       </record>
       <record name="deny" javaclass="com.wm.util.Values">
       </record>
@@ -42,6 +106,90 @@
       <value name="name">Authenticate</value>
       <record name="allow" javaclass="com.wm.util.Values">
         <value name="system/Authenticate">system/Authenticate</value>
+      </record>
+      <record name="deny" javaclass="com.wm.util.Values">
+      </record>
+    </record>
+    <record name="~EXTRACT~pq__oldMWSnewMWS_q9a" javaclass="com.wm.app.b2b.server.ACLGroup">
+      <value name="name">~EXTRACT~pq__oldMWSnewMWS_q9a</value>
+      <record name="allow" javaclass="com.wm.util.Values">
+      </record>
+      <record name="deny" javaclass="com.wm.util.Values">
+      </record>
+    </record>
+    <record name="~EXTRACT~pq__oldQAMWSNewQAMWS_nlb" javaclass="com.wm.app.b2b.server.ACLGroup">
+      <value name="name">~EXTRACT~pq__oldQAMWSNewQAMWS_nlb</value>
+      <record name="allow" javaclass="com.wm.util.Values">
+      </record>
+      <record name="deny" javaclass="com.wm.util.Values">
+      </record>
+    </record>
+    <record name="~VIEW~pq__olddevnewDev2packages_5ybg" javaclass="com.wm.app.b2b.server.ACLGroup">
+      <value name="name">~VIEW~pq__olddevnewDev2packages_5ybg</value>
+      <record name="allow" javaclass="com.wm.util.Values">
+      </record>
+      <record name="deny" javaclass="com.wm.util.Values">
+      </record>
+    </record>
+    <record name="~DEPLOY~pq__WxMWSdevQA_93ad" javaclass="com.wm.app.b2b.server.ACLGroup">
+      <value name="name">~DEPLOY~pq__WxMWSdevQA_93ad</value>
+      <record name="allow" javaclass="com.wm.util.Values">
+      </record>
+      <record name="deny" javaclass="com.wm.util.Values">
+      </record>
+    </record>
+    <record name="~MAP~pq__oldDevnewDev_q9a" javaclass="com.wm.app.b2b.server.ACLGroup">
+      <value name="name">~MAP~pq__oldDevnewDev_q9a</value>
+      <record name="allow" javaclass="com.wm.util.Values">
+      </record>
+      <record name="deny" javaclass="com.wm.util.Values">
+      </record>
+    </record>
+    <record name="~EXTRACT~pq__WxMWSdevQA_93ad" javaclass="com.wm.app.b2b.server.ACLGroup">
+      <value name="name">~EXTRACT~pq__WxMWSdevQA_93ad</value>
+      <record name="allow" javaclass="com.wm.util.Values">
+      </record>
+      <record name="deny" javaclass="com.wm.util.Values">
+      </record>
+    </record>
+    <record name="~DEPLOY~pq__oldMWSnewMWS_q9a" javaclass="com.wm.app.b2b.server.ACLGroup">
+      <value name="name">~DEPLOY~pq__oldMWSnewMWS_q9a</value>
+      <record name="allow" javaclass="com.wm.util.Values">
+      </record>
+      <record name="deny" javaclass="com.wm.util.Values">
+      </record>
+    </record>
+    <record name="~MAP~pq__oldMWSnewMWS_q9a" javaclass="com.wm.app.b2b.server.ACLGroup">
+      <value name="name">~MAP~pq__oldMWSnewMWS_q9a</value>
+      <record name="allow" javaclass="com.wm.util.Values">
+      </record>
+      <record name="deny" javaclass="com.wm.util.Values">
+      </record>
+    </record>
+    <record name="~DEFINE~pq__WxMWSdevQA_93ad" javaclass="com.wm.app.b2b.server.ACLGroup">
+      <value name="name">~DEFINE~pq__WxMWSdevQA_93ad</value>
+      <record name="allow" javaclass="com.wm.util.Values">
+      </record>
+      <record name="deny" javaclass="com.wm.util.Values">
+      </record>
+    </record>
+    <record name="~MAP~pq__newDevNewQA_06a" javaclass="com.wm.app.b2b.server.ACLGroup">
+      <value name="name">~MAP~pq__newDevNewQA_06a</value>
+      <record name="allow" javaclass="com.wm.util.Values">
+      </record>
+      <record name="deny" javaclass="com.wm.util.Values">
+      </record>
+    </record>
+    <record name="~DEFINE~pq__newDevNewQA_06a" javaclass="com.wm.app.b2b.server.ACLGroup">
+      <value name="name">~DEFINE~pq__newDevNewQA_06a</value>
+      <record name="allow" javaclass="com.wm.util.Values">
+      </record>
+      <record name="deny" javaclass="com.wm.util.Values">
+      </record>
+    </record>
+    <record name="~MAP~pq__WxMWSdevQA_93ad" javaclass="com.wm.app.b2b.server.ACLGroup">
+      <value name="name">~MAP~pq__WxMWSdevQA_93ad</value>
+      <record name="allow" javaclass="com.wm.util.Values">
       </record>
       <record name="deny" javaclass="com.wm.util.Values">
       </record>
@@ -56,28 +204,16 @@
       <record name="deny" javaclass="com.wm.util.Values">
       </record>
     </record>
-    <record name="Internal" javaclass="com.wm.app.b2b.server.ACLGroup">
-      <value name="name">Internal</value>
+    <record name="~EXTRACT~pq__oldDevnewDev_q9a" javaclass="com.wm.app.b2b.server.ACLGroup">
+      <value name="name">~EXTRACT~pq__oldDevnewDev_q9a</value>
       <record name="allow" javaclass="com.wm.util.Values">
-        <value name="local/Administrators">local/Administrators</value>
-        <value name="local/Developers">local/Developers</value>
-        <value name="system/ISDevelopers">system/ISDevelopers</value>
       </record>
       <record name="deny" javaclass="com.wm.util.Values">
       </record>
     </record>
-    <record name="Administrators" javaclass="com.wm.app.b2b.server.ACLGroup">
-      <value name="name">Administrators</value>
+    <record name="~MAP~pq__olddevnewDev2packages_5ybg" javaclass="com.wm.app.b2b.server.ACLGroup">
+      <value name="name">~MAP~pq__olddevnewDev2packages_5ybg</value>
       <record name="allow" javaclass="com.wm.util.Values">
-        <value name="local/Administrators">local/Administrators</value>
-      </record>
-      <record name="deny" javaclass="com.wm.util.Values">
-      </record>
-    </record>
-    <record name="Anonymous" javaclass="com.wm.app.b2b.server.ACLGroup">
-      <value name="name">Anonymous</value>
-      <record name="allow" javaclass="com.wm.util.Values">
-        <value name="local/Everybody">local/Everybody</value>
       </record>
       <record name="deny" javaclass="com.wm.util.Values">
       </record>
@@ -91,6 +227,13 @@
         <value name="local/Anonymous">local/Anonymous</value>
       </record>
     </record>
+    <record name="~EXTRACT~pq__newDevNewQA_06a" javaclass="com.wm.app.b2b.server.ACLGroup">
+      <value name="name">~EXTRACT~pq__newDevNewQA_06a</value>
+      <record name="allow" javaclass="com.wm.util.Values">
+      </record>
+      <record name="deny" javaclass="com.wm.util.Values">
+      </record>
+    </record>
     <record name="MonitorUsers" javaclass="com.wm.app.b2b.server.ACLGroup">
       <value name="name">MonitorUsers</value>
       <record name="allow" javaclass="com.wm.util.Values">
@@ -99,6 +242,73 @@
         <value name="local/MonitorUsers">local/MonitorUsers</value>
         <value name="system/My webMethods Administrators">system/My webMethods Administrators</value>
         <value name="system/My webMethods Users">system/My webMethods Users</value>
+      </record>
+      <record name="deny" javaclass="com.wm.util.Values">
+      </record>
+    </record>
+    <record name="~DEFINE~pq__oldDevnewDev_q9a" javaclass="com.wm.app.b2b.server.ACLGroup">
+      <value name="name">~DEFINE~pq__oldDevnewDev_q9a</value>
+      <record name="allow" javaclass="com.wm.util.Values">
+      </record>
+      <record name="deny" javaclass="com.wm.util.Values">
+      </record>
+    </record>
+    <record name="~DEPLOY~pq__oldDevnewDev_q9a" javaclass="com.wm.app.b2b.server.ACLGroup">
+      <value name="name">~DEPLOY~pq__oldDevnewDev_q9a</value>
+      <record name="allow" javaclass="com.wm.util.Values">
+      </record>
+      <record name="deny" javaclass="com.wm.util.Values">
+      </record>
+    </record>
+    <record name="~DEPLOY~pq__newDevNewQA_06a" javaclass="com.wm.app.b2b.server.ACLGroup">
+      <value name="name">~DEPLOY~pq__newDevNewQA_06a</value>
+      <record name="allow" javaclass="com.wm.util.Values">
+      </record>
+      <record name="deny" javaclass="com.wm.util.Values">
+      </record>
+    </record>
+    <record name="~MAP~pq__oldQAMWSNewQAMWS_nlb" javaclass="com.wm.app.b2b.server.ACLGroup">
+      <value name="name">~MAP~pq__oldQAMWSNewQAMWS_nlb</value>
+      <record name="allow" javaclass="com.wm.util.Values">
+      </record>
+      <record name="deny" javaclass="com.wm.util.Values">
+      </record>
+    </record>
+    <record name="Developers" javaclass="com.wm.app.b2b.server.ACLGroup">
+      <value name="name">Developers</value>
+      <record name="allow" javaclass="com.wm.util.Values">
+        <value name="local/Administrators">local/Administrators</value>
+        <value name="local/Developers">local/Developers</value>
+        <value name="system/ISDevelopers">system/ISDevelopers</value>
+      </record>
+      <record name="deny" javaclass="com.wm.util.Values">
+      </record>
+    </record>
+    <record name="~DEFINE~pq__oldMWSnewMWS_q9a" javaclass="com.wm.app.b2b.server.ACLGroup">
+      <value name="name">~DEFINE~pq__oldMWSnewMWS_q9a</value>
+      <record name="allow" javaclass="com.wm.util.Values">
+      </record>
+      <record name="deny" javaclass="com.wm.util.Values">
+      </record>
+    </record>
+    <record name="Administrators" javaclass="com.wm.app.b2b.server.ACLGroup">
+      <value name="name">Administrators</value>
+      <record name="allow" javaclass="com.wm.util.Values">
+        <value name="local/Administrators">local/Administrators</value>
+      </record>
+      <record name="deny" javaclass="com.wm.util.Values">
+      </record>
+    </record>
+    <record name="~VIEW~pq__oldMWSnewMWS_q9a" javaclass="com.wm.app.b2b.server.ACLGroup">
+      <value name="name">~VIEW~pq__oldMWSnewMWS_q9a</value>
+      <record name="allow" javaclass="com.wm.util.Values">
+      </record>
+      <record name="deny" javaclass="com.wm.util.Values">
+      </record>
+    </record>
+    <record name="~VIEW~pq__oldQAMWSNewQAMWS_nlb" javaclass="com.wm.app.b2b.server.ACLGroup">
+      <value name="name">~VIEW~pq__oldQAMWSNewQAMWS_nlb</value>
+      <record name="allow" javaclass="com.wm.util.Values">
       </record>
       <record name="deny" javaclass="com.wm.util.Values">
       </record>

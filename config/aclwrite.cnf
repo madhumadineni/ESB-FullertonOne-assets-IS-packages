@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Values version="2.0">
-  <value name="pub">Developers</value>
+  <value name="pub">Anonymous</value>
   <value name="pub.broker">WmPrivate</value>
   <value name="pub.cache">WmPrivate</value>
   <value name="pub.client">WmPrivate</value>
@@ -59,23 +59,26 @@
   <value name="omi">WmPrivate</value>
   <value name="wm.ism">WmPrivate</value>
   <value name="wm.server.deployer.spi">Administrators</value>
-  <value name="wm.server.metadata">WmPrivate</value>
   <value name="com.wm.isextdc">Administrators</value>
   <value name="pub.monitor">WmPrivate</value>
   <value name="wm.monitor">WmPrivate</value>
   <value name="ws.monitor">WmPrivate</value>
   <value name="rs.monitor">WmPrivate</value>
-  <value name="wm.server.ff:SEFParse">WmPrivate</value>
-  <value name="pub.flatFile">WmPrivate</value>
+  <value name="wm.server.metadata">WmPrivate</value>
+  <value name="wm.jsonapi.logging:init">WmPrivate</value>
+  <value name="wm.jsonapi.logging">WmPrivate</value>
   <value name="pub.vcs.admin:setCurrentUser">WmPrivate</value>
   <value name="pub.vcs.admin:removeCurrentUser">WmPrivate</value>
   <value name="pub.vcs.admin:setMultipleUsers">WmPrivate</value>
   <value name="pub.vcs.admin:removeMultipleUsers">WmPrivate</value>
   <value name="pub.vcs.admin:getUsers">WmPrivate</value>
+  <value name="wm.server.ff:SEFParse">WmPrivate</value>
+  <value name="pub.flatFile">WmPrivate</value>
   <value name="wm.deployer.Wrapper">WmPrivate</value>
   <value name="wm.deployer.Util:receiveFiles">Anonymous</value>
   <value name="wm.adapter.wmjdbc.admin">WmPrivate</value>
-  <value name="com.wm.artextdc">Administrators</value>
-  <value name="applatform.services:registerService">Default</value>
-  <value name="applatform.services:unregisterService">Default</value>
+  <value name="applatform.pkg">Administrators</value>
+  <value name="applatform.service">Developers</value>
+  <value name="applatform.jsp">Anonymous</value>
+  <value name="wm.deployer.resource.gui.IS:receiveFiles">Anonymous</value>
 </Values>

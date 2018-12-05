@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Values version="2.0">
-  <value name="pub">Developers</value>
+  <value name="pub">Anonymous</value>
   <value name="pub.broker">WmPrivate</value>
   <value name="pub.client">WmPrivate</value>
   <value name="pub.cluster">WmPrivate</value>
@@ -64,27 +64,36 @@
   <value name="wm.server.sftpclient">Administrators</value>
   <value name="wm.server:ntlmclient">Administrators</value>
   <value name="wm.server.globalvariables">Administrators</value>
-  <value name="wm.server.metadata">WmPrivate</value>
   <value name="com.wm.isextdc">Administrators</value>
   <value name="pub.monitor">WmPrivate</value>
   <value name="wm.monitor">WmPrivate</value>
   <value name="ws.monitor">WmPrivate</value>
   <value name="rs.monitor">WmPrivate</value>
-  <value name="wm.server.ff:SEFParse">WmPrivate</value>
-  <value name="pub.flatFile">WmPrivate</value>
+  <value name="wm.server.metadata">WmPrivate</value>
+  <value name="wm.jsonapi.logging:init">WmPrivate</value>
+  <value name="wm.jsonapi.logging">WmPrivate</value>
   <value name="pub.vcs.admin:setCurrentUser">WmPrivate</value>
   <value name="pub.vcs.admin:removeCurrentUser">WmPrivate</value>
   <value name="pub.vcs.admin:setMultipleUsers">WmPrivate</value>
   <value name="pub.vcs.admin:removeMultipleUsers">WmPrivate</value>
   <value name="pub.vcs.admin:getUsers">WmPrivate</value>
+  <value name="wm.server.ff:SEFParse">WmPrivate</value>
+  <value name="pub.flatFile">WmPrivate</value>
   <value name="wm.deployer.Wrapper">WmPrivate</value>
   <value name="wm.deployer.Util:receiveFiles">Anonymous</value>
   <value name="wm.adapter.wmjdbc.admin">WmPrivate</value>
-  <value name="com.wm.artextdc">Administrators</value>
-  <value name="applatform.services:registerService">Default</value>
-  <value name="applatform.services:unregisterService">Default</value>
+  <value name="pub.pollingNotificationUtils:dropDatabaseObjects">WmPrivate</value>
+  <value name="pub.pollingNotificationUtils:getDatabaseObjectsForNotification">WmPrivate</value>
+  <value name="pub.jdbcAdapter:createConnectionNodes">WmPrivate</value>
+  <value name="pub.jdbcAdapter:updateConnectionPassword">WmPrivate</value>
+  <value name="pub.jdbcAdapter:updateNotificationSchema">WmPrivate</value>
+  <value name="pub.jdbcAdapter:updateServiceSchema">WmPrivate</value>
+  <value name="applatform.pkg">Administrators</value>
+  <value name="applatform.service">Developers</value>
+  <value name="applatform.jsp">Anonymous</value>
+  <value name="wm.deployer.resource.gui.IS:receiveFiles">Anonymous</value>
   <value name="FHGCanonical.docs:authenticateRequest">Anonymous</value>
-  <value name="FHGCanonical.docs:authenticateResponse">Anonymous</value>
-  <value name="FHGCanonical.docs:verifyMemberResponse">Anonymous</value>
   <value name="FHGCanonical.docs:verifyMemberFHN3Response">Anonymous</value>
+  <value name="FHGCanonical.docs:verifyMemberResponse">Anonymous</value>
+  <value name="FHGCanonical.docs:authenticateResponse">Anonymous</value>
 </Values>
