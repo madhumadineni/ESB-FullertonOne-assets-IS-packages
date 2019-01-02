@@ -3,134 +3,45 @@
 <IDataXMLCoder version="1.0">
   <record javaclass="com.wm.data.ISMemDataImpl">
     <array name="globalVariables" type="record" depth="1">
+
       <record javaclass="com.wm.data.ISMemDataImpl">
-        <value name="key">test</value>
-        <value name="value">testValue</value>
+        <value name="key">v01.verifyMember.IDFHN3.tokenCacheName</value>
+        <value name="value">TokenCache</value>
         <value name="isSecure">false</value>
       </record>
       <record javaclass="com.wm.data.ISMemDataImpl">
-        <value name="key">v01.authenticateUser.url</value>
-        <value name="value">http://localhost:7515/provider/auth/user</value>
+        <value name="key">v01.verifyMember.IDFHN3.tokenCacheManager</value>
+        <value name="value">ESBCacheManager</value>
         <value name="isSecure">false</value>
       </record>
       <record javaclass="com.wm.data.ISMemDataImpl">
-        <value name="key">v01.authenticateUser.timeout</value>
-        <value name="value">60000</value>
+        <value name="key">v01.verifyMember.IDFHN3.tokenURL</value>
+        <value name="value">https://m.fhnid.com/api/oauth2/token</value>
         <value name="isSecure">false</value>
       </record>
       <record javaclass="com.wm.data.ISMemDataImpl">
-        <value name="key">v01.authenticate.service_id</value>
-        <value name="value">1</value>
+        <value name="key">v01.verifyMember.IDFHN3.tokenUserName</value>
+        <value name="value">MobileUser</value>
         <value name="isSecure">false</value>
       </record>
       <record javaclass="com.wm.data.ISMemDataImpl">
-        <value name="key">v01.authenticate.logger</value>
-        <value name="value">AUTHENTICATE_V01_LOGGER</value>
+        <value name="key">v01.verifyMember.IDFHN3.tokenPassword</value>
+        <value name="value">gvhandle.v01.verifyMember.IDFHN3.tokenPassword</value>
+        <value name="isSecure">true</value>
+      </record>
+      <record javaclass="com.wm.data.ISMemDataImpl">
+        <value name="key">v01.verifyMember.IDFHN3.tokenBufferMins</value>
+        <value name="value">4</value>
         <value name="isSecure">false</value>
       </record>
       <record javaclass="com.wm.data.ISMemDataImpl">
-        <value name="key">v01.authenticate.success</value>
-        <value name="value">true</value>
+        <value name="key">v01.verifyMember.IDFHN3.fhn3URL</value>
+        <value name="value">https://m.fhnid.com/api/foneintegration/verifymember</value>
         <value name="isSecure">false</value>
       </record>
       <record javaclass="com.wm.data.ISMemDataImpl">
-        <value name="key">v01.authenticate.successstatus</value>
-        <value name="value">Successful</value>
-        <value name="isSecure">false</value>
-      </record>
-      <record javaclass="com.wm.data.ISMemDataImpl">
-        <value name="key">v01.authenticate.failure</value>
-        <value name="value">false</value>
-        <value name="isSecure">false</value>
-      </record>
-      <record javaclass="com.wm.data.ISMemDataImpl">
-        <value name="key">v01.authenticate.invalidlogin.code</value>
-        <value name="value">401</value>
-        <value name="isSecure">false</value>
-      </record>
-      <record javaclass="com.wm.data.ISMemDataImpl">
-        <value name="key">v01.authenticate.invalidlogin.message</value>
-        <value name="value">Invalid User/Password</value>
-        <value name="isSecure">false</value>
-      </record>
-      <record javaclass="com.wm.data.ISMemDataImpl">
-        <value name="key">v01.authenticate.internalerror.code</value>
-        <value name="value">500</value>
-        <value name="isSecure">false</value>
-      </record>
-      <record javaclass="com.wm.data.ISMemDataImpl">
-        <value name="key">v01.authenticate.dataissue.code</value>
-        <value name="value">400</value>
-        <value name="isSecure">false</value>
-      </record>
-      <record javaclass="com.wm.data.ISMemDataImpl">
-        <value name="key">v01.authenticate.dataissue.message</value>
-        <value name="value">Transaction_id missing</value>
-        <value name="isSecure">false</value>
-      </record>
-      <record javaclass="com.wm.data.ISMemDataImpl">
-        <value name="key">v01.authenticate.failurestatus</value>
-        <value name="value">Failed</value>
-        <value name="isSecure">false</value>
-      </record>
-      <record javaclass="com.wm.data.ISMemDataImpl">
-        <value name="key">v01.verifyMember.FHN3URL</value>
-        <value name="value">https://uat-api.fhn3.com/esb_verifyMember</value>
-        <value name="isSecure">false</value>
-      </record>
-      <record javaclass="com.wm.data.ISMemDataImpl">
-        <value name="key">v01.verifyMember.timeout</value>
-        <value name="value">60000</value>
-        <value name="isSecure">false</value>
-      </record>
-      <record javaclass="com.wm.data.ISMemDataImpl">
-        <value name="key">v01.verifyMember.FHN3.500Error</value>
-        <value name="value">member not found in FHN3</value>
-        <value name="isSecure">false</value>
-      </record>
-      <record javaclass="com.wm.data.ISMemDataImpl">
-        <value name="key">v01.verifyMember.FHN3.Error</value>
-        <value name="value">Issue with FHN3 WebService</value>
-        <value name="isSecure">false</value>
-      </record>
-      <record javaclass="com.wm.data.ISMemDataImpl">
-        <value name="key">v01.verifyMember.ESB.ErrorCode</value>
-        <value name="value">500</value>
-        <value name="isSecure">false</value>
-      </record>
-      <record javaclass="com.wm.data.ISMemDataImpl">
-        <value name="key">v01.verifyMember.service_id</value>
-        <value name="value">2</value>
-        <value name="isSecure">false</value>
-      </record>
-      <record javaclass="com.wm.data.ISMemDataImpl">
-        <value name="key">v01.verifyMember.logger</value>
-        <value name="value">VERIFYMEMBER_V01_LOGGER</value>
-        <value name="isSecure">false</value>
-      </record>
-      <record javaclass="com.wm.data.ISMemDataImpl">
-        <value name="key">v01.verifyMember.dataissue.code</value>
-        <value name="value">400</value>
-        <value name="isSecure">false</value>
-      </record>
-      <record javaclass="com.wm.data.ISMemDataImpl">
-        <value name="key">v01.verifyMember.failure</value>
-        <value name="value">false</value>
-        <value name="isSecure">false</value>
-      </record>
-      <record javaclass="com.wm.data.ISMemDataImpl">
-        <value name="key">v01.verifyMember.dataissue.message</value>
-        <value name="value">Transaction_id missing</value>
-        <value name="isSecure">false</value>
-      </record>
-      <record javaclass="com.wm.data.ISMemDataImpl">
-        <value name="key">v01.verifyMember.success</value>
-        <value name="value">true</value>
-        <value name="isSecure">false</value>
-      </record>
-      <record javaclass="com.wm.data.ISMemDataImpl">
-        <value name="key">v01.verifyMember.FHN3.500Error.invalidInputs</value>
-        <value name="value">Invalid/missing input data</value>
+        <value name="key">v01.verifyMember.dataissue.invalidCountry</value>
+        <value name="value">Invalid/missing Country Field</value>
         <value name="isSecure">false</value>
       </record>
     </array>
