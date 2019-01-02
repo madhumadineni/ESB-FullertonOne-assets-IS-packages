@@ -2411,7 +2411,6 @@
     <value name="field_name">streamToStringInput</value>
     <value name="field_type">record</value>
     <value name="field_dim">0</value>
-    <value name="wrapper_type">IData</value>
     <value name="nillable">true</value>
     <value name="form_qualified">false</value>
     <value name="is_global">false</value>
@@ -7928,6 +7927,21 @@
 </MAPDELETE>
 
 <MAPDELETE FIELD="/verifyMemberFHN3Request;4;0;FHGCanonical.docs:verifyMemberFHN3Request">
+</MAPDELETE>
+
+<MAPDELETE FIELD="/text;1;0">
+</MAPDELETE>
+
+<MAPDELETE FIELD="/level;1;0">
+</MAPDELETE>
+
+<MAPDELETE FIELD="/string;1;0">
+</MAPDELETE>
+
+<MAPDELETE FIELD="/searchMemberIndex;1;0">
+</MAPDELETE>
+
+<MAPDELETE FIELD="/fieldMissingIndex;1;0">
 </MAPDELETE>
 </MAP>
 </SEQUENCE>

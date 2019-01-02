@@ -122,16 +122,16 @@
   </array>
   <array name="auditfields_output" type="value" depth="2">
     <array type="value" depth="1">
+      <value>/verifyMemberFHN3Response;4;0;FHGCanonical.docs:verifyMemberFHN3Response/status;1;0</value>
+      <value>status</value>
+    </array>
+    <array type="value" depth="1">
       <value>/error;4;0;FHGCanonical.common:errorDocument/errorMessage;1;0</value>
       <value>errorMessage</value>
     </array>
     <array type="value" depth="1">
       <value>/error;4;0;FHGCanonical.common:errorDocument/errorCode;1;0</value>
       <value>errorCode</value>
-    </array>
-    <array type="value" depth="1">
-      <value>/verifyMemberFHN3Response;4;0;FHGCanonical.docs:verifyMemberFHN3Response/status;1;0</value>
-      <value>status</value>
     </array>
     <array type="value" depth="1">
       <value>/error;4;0;FHGCanonical.common:errorDocument/detailedMessage;1;0</value>

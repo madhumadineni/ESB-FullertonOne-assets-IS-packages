@@ -7928,6 +7928,24 @@
 
 <MAPDELETE FIELD="/verifyMemberFHN3Request;4;0;FHGCanonical.docs:verifyMemberFHN3Request">
 </MAPDELETE>
+
+<MAPDELETE FIELD="/text;1;0">
+</MAPDELETE>
+
+<MAPDELETE FIELD="/level;1;0">
+</MAPDELETE>
+
+<MAPDELETE FIELD="/string;1;0">
+</MAPDELETE>
+
+<MAPDELETE FIELD="/searchMemberIndex;1;0">
+</MAPDELETE>
+
+<MAPDELETE FIELD="/fieldMissingIndex;1;0">
+</MAPDELETE>
+
+<MAPDELETE FIELD="/inputStream;3;0">
+</MAPDELETE>
 </MAP>
 </SEQUENCE>
 </FLOW>
